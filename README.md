@@ -1,1 +1,1 @@
-# kursova
+npm i
