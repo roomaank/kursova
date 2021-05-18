@@ -2,7 +2,16 @@
   <div class="header__wrapper-top">
     <div class="header__logo">Speak</div>
     <div class="header__nav-menu">
-      <div class="nav__item" *ngFor="let item of nav_items">{{ item.title }}</div>
+      <div
+        class="nav__item"
+        *ngFor="let item of nav_items"
+        (click)="navigateTo(item)"
+      >
+        <img [src]="item.icon" />
+        <div>
+          {{ item.title }}
+        </div>
+      </div>
     </div>
   </div>
 </div>
