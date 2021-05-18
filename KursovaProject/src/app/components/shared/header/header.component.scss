@@ -1,7 +1,9 @@
 .header {
   &__wrapper {
-    height: 100px;
     padding: 0 30px;
+    height: 100px;
+    width: 100%;
+    position: fixed;
     box-shadow: 0 6px 6px rgb(10 16 20 / 15%), 0 0 52px rgb(10 16 20 / 12%);
     &-top {
       height: 100%;
@@ -27,7 +29,7 @@
   font-family: "Oswald", Helvetica, Arial, sans-serif;
   cursor: pointer;
   letter-spacing: 2px;
-//   &:active {
-//     color: yellow;
-//   }
+  //   &:active {
+  //     color: yellow;
+  //   }
 }
