@@ -10,6 +10,7 @@ import { AboutUsComponent } from './components/feature/about-us/about-us.compone
 import { CoursesComponent } from './components/feature/courses/courses.component';
 import { ReviewsComponent } from './components/feature/reviews/reviews.component';
 import { ContactsComponent } from './components/feature/contacts/contacts.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent, FooterComponent, AboutUsComponent, CoursesComponent, ReviewsComponent, ContactsComponent],
@@ -17,6 +18,7 @@ import { ContactsComponent } from './components/feature/contacts/contacts.compon
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
