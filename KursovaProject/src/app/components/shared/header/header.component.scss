@@ -1,0 +1,33 @@
+.header {
+  &__wrapper {
+    height: 100px;
+    padding: 0 30px;
+    box-shadow: 0 6px 6px rgb(10 16 20 / 15%), 0 0 52px rgb(10 16 20 / 12%);
+    &-top {
+      height: 100%;
+      width: 80%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  &__logo {
+    font-size: 30px;
+  }
+  &__nav-menu {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.nav__item {
+  font-size: 14px;
+  font-family: "Oswald", Helvetica, Arial, sans-serif;
+  cursor: pointer;
+  letter-spacing: 2px;
+//   &:active {
+//     color: yellow;
+//   }
+}

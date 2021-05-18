@@ -1,3 +1,4 @@
+import { NAV_ITEMS } from './../../../constants/header.constants';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+
+  nav_items = NAV_ITEMS;
 
   constructor() { }
 
