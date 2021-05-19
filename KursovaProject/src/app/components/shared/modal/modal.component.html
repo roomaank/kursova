@@ -1,5 +1,6 @@
 <div class="modal__wrapper">
-  <div class="modal__close">
+  <div class="modal__header">
+    <!-- <div>Sign Up</div> -->
     <button></button>
   </div>
   <div class="modal__inner">
@@ -50,6 +51,9 @@
           <input class="modal__control" type="text" formControlName="phone" />
         </control-wrapper>
       </form>
+      <div class="button__wrapper">
+        <button (click)="submitForm()">Submit</button>
+      </div>
     </div>
   </div>
 </div>

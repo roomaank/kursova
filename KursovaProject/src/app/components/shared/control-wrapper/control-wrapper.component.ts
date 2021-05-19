@@ -11,6 +11,7 @@ export class ControlWrapperComponent implements OnInit {
   @Input() asterisk!: boolean;
   @Input() labelIcon! : string;
   @Input() tooltipText!: any;
+  @Input() showErrors: any
 
   constructor() { }
 

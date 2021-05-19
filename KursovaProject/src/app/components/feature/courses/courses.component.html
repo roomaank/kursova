@@ -3,9 +3,12 @@
     <div class="course__block" *ngFor="let course of courses">
       <div class="course__block-type">{{ course.type }}</div>
       <div class="course__block-descr">{{ course.description }}</div>
-      <div class="course__block-days">Days: {{ course.days }}</div>
+      <div class="course__block-days">
+        Days:
+        <div class="course__block-days-count">{{ course.days }}</div>
+      </div>
       <div class="course__block-button">
-        <button (click)="openDialog()">More Info</button>
+        <button (click)="openDialog()">Sign Up</button>
       </div>
     </div>
   </div>

@@ -14,9 +14,10 @@ import { ContactsComponent } from './components/feature/contacts/contacts.compon
 import { ModalComponent } from './components/shared/modal/modal.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ControlWrapperComponent } from './components/shared/control-wrapper/control-wrapper.component';
+import { ErrorContentComponent } from './components/shared/error-content/error-content.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, AboutUsComponent, CoursesComponent, ReviewsComponent, ContactsComponent, ModalComponent, ControlWrapperComponent],
+  declarations: [AppComponent, HeaderComponent, FooterComponent, AboutUsComponent, CoursesComponent, ReviewsComponent, ContactsComponent, ModalComponent, ControlWrapperComponent, ErrorContentComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
