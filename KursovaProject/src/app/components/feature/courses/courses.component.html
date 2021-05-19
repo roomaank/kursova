@@ -1,1 +1,12 @@
-<p>courses works!</p>
+<div class="courses__wrapper">
+  <div class="courses__inner">
+    <div class="course__block" *ngFor="let course of courses">
+      <div class="course__block-type">{{ course.type }}</div>
+      <div class="course__block-descr">{{ course.description }}</div>
+      <div class="course__block-days">Days: {{ course.days }}</div>
+      <div class="course__block-button">
+        <button (click)="openDialog()">More Info</button>
+      </div>
+    </div>
+  </div>
+</div>

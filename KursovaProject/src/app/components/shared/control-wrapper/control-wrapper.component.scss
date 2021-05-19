@@ -1,0 +1,14 @@
+.container {
+  label {
+    font-weight: 500;
+    height: 20px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.tooltip__icon {
+  height: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+}

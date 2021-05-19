@@ -1,0 +1,70 @@
+::ng-deep {
+  .mat-dialog-container {
+    padding: 0;
+  }
+}
+
+.modal {
+  &__close {
+    height: 10%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+
+    button {
+      height: 28px;
+      width: 28px;
+      background-color: transparent;
+      border: none;
+      background-image: url(../../../../assets/images/cancel.svg);
+
+      &:hover {
+        transform: rotate(90deg);
+        transition: .3s;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__wrapper {
+    width: 700px;
+    height: 500px;
+    padding: 10px;
+  }
+
+  &__inner {
+    width: 100%;
+    height: 90%;
+  }
+
+  &__required {
+    height: 10%;
+    font-style: italic;
+    text-align: end;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__form {
+    padding: 0 30px;
+
+    form {
+      display: grid;
+      grid-gap: 1.875rem;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__control {
+    width: 100%;
+    margin: 10px 0;
+    outline: none;
+    border: 1px solid #cccfd3;
+    border-radius: 4px;
+    padding: 10px;
+    padding-right: 36px;
+    line-height: 1.5rem;
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,9 @@
+<div class="container">
+  <label *ngIf="label">
+    {{ label }}
+    <span *ngIf="asterisk" class="label__asterisk">*</span>
+    <img class="tooltip__icon" [src]="labelIcon" alt="">
+  </label>
+</div>
+
+<ng-content></ng-content>

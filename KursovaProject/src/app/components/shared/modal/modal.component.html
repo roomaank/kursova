@@ -1,0 +1,55 @@
+<div class="modal__wrapper">
+  <div class="modal__close">
+    <button></button>
+  </div>
+  <div class="modal__inner">
+    <div class="modal__required"><sup>*</sup>Required fields</div>
+    <div class="modal__form">
+      <form [formGroup]="signUpCourseForm">
+        <control-wrapper
+          label="First Name"
+          [asterisk]="true"
+          [labelIcon]="'assets/images/tooltip.svg'"
+          [tooltipText]="tooltipText"
+        >
+          <input
+            class="modal__control"
+            type="text"
+            formControlName="firstName"
+          />
+        </control-wrapper>
+
+        <control-wrapper
+          label="Last Name"
+          [asterisk]="true"
+          [labelIcon]="'assets/images/tooltip.svg'"
+          [tooltipText]="tooltipText"
+        >
+          <input
+            class="modal__control"
+            type="text"
+            formControlName="lastName"
+          />
+        </control-wrapper>
+
+        <control-wrapper
+          label="Email"
+          [asterisk]="true"
+          [labelIcon]="'assets/images/tooltip.svg'"
+          [tooltipText]="tooltipText"
+        >
+          <input class="modal__control" type="email" formControlName="email" />
+        </control-wrapper>
+
+        <control-wrapper
+          label="Phone"
+          [asterisk]="true"
+          [labelIcon]="'assets/images/tooltip.svg'"
+          [tooltipText]="tooltipText"
+        >
+          <input class="modal__control" type="text" formControlName="phone" />
+        </control-wrapper>
+      </form>
+    </div>
+  </div>
+</div>
