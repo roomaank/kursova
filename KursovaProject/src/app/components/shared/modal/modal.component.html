@@ -12,6 +12,9 @@
           [asterisk]="true"
           [labelIcon]="'assets/images/tooltip.svg'"
           [tooltipText]="tooltipText"
+          [showError]="showError('firstName')"
+          [fieldError]="getError('firstName')"
+          errorMappingKey="firstName"
         >
           <input
             class="modal__control"
@@ -25,6 +28,9 @@
           [asterisk]="true"
           [labelIcon]="'assets/images/tooltip.svg'"
           [tooltipText]="tooltipText"
+          [showError]="showError('lastName')"
+          [fieldError]="getError('lastName')"
+          errorMappingKey="lastName"
         >
           <input
             class="modal__control"
@@ -38,6 +44,9 @@
           [asterisk]="true"
           [labelIcon]="'assets/images/tooltip.svg'"
           [tooltipText]="tooltipText"
+          [showError]="showError('email')"
+          [fieldError]="getError('email')"
+          errorMappingKey="email"
         >
           <input class="modal__control" type="email" formControlName="email" />
         </control-wrapper>
@@ -47,6 +56,9 @@
           [asterisk]="true"
           [labelIcon]="'assets/images/tooltip.svg'"
           [tooltipText]="tooltipText"
+          [showError]="showError('phone')"
+          [fieldError]="getError('phone')"
+          errorMappingKey="phone"
         >
           <input class="modal__control" type="text" formControlName="phone" />
         </control-wrapper>

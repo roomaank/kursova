@@ -1,7 +1,8 @@
+import { FieldErrors } from './../../../constants/error-mapping';
 import { TOOLTIPS_TEXT } from './../../../constants/tooltips';
 import { FormCreatorService } from './../../../services/form-creator.service';
 import { Component, OnInit } from '@angular/core';
-import { AbstractControl, FormGroup, ValidationErrors } from '@angular/forms';
+import { FormGroup, ValidationErrors } from '@angular/forms';
 
 @Component({
   selector: 'app-modal',
@@ -9,9 +10,9 @@ import { AbstractControl, FormGroup, ValidationErrors } from '@angular/forms';
   styleUrls: ['./modal.component.scss'],
 })
 export class ModalComponent implements OnInit {
-  signUpCourseForm!: FormGroup;
+  signUpCourseForm : FormGroup;
   tooltipText = TOOLTIPS_TEXT.signUpForm;
-  formIsSubmitted!: boolean;
+  formIsSubmitted: boolean;
 
   constructor(private formCreatorService: FormCreatorService) {}
 
@@ -27,7 +28,15 @@ export class ModalComponent implements OnInit {
     console.log(this.signUpCourseForm.value);
   }
 
-  // showErrors(field: AbstractControl): boolean {
-  //   return field.invalid && (field.touched || this.formIsSubmitted);
-  // }
+  showError(fieldName: string): boolean {
+    const field = this.signUpCourseForm.get(fieldName);
+
+    return field.touched && field.invalid;
+  }
+
+  getError(fieldName: string): ValidationErrors {
+    return this.signUpCourseForm.get(fieldName).errors;
+  }
+
+
 }

@@ -1,3 +1,4 @@
+import { ValidationErrors } from '@angular/forms';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
@@ -7,15 +8,20 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ControlWrapperComponent implements OnInit {
 
-  @Input() label!: string
-  @Input() asterisk!: boolean;
-  @Input() labelIcon! : string;
-  @Input() tooltipText!: any;
-  @Input() showErrors: any
+  @Input() label: string
+  @Input() asterisk: boolean;
+  @Input() labelIcon: string;
+  @Input() tooltipText: any;
+  @Input() showError: boolean
+  @Input() fieldError: ValidationErrors
+  @Input() errorMappingKey: string;
 
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.errorMappingKey)
+    console.log(this.fieldError)
+    console.log(this.showError)
   }
 
 }
