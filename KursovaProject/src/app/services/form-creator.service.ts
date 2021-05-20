@@ -33,8 +33,7 @@ export class FormCreatorService {
         '',
         [
           Validators.required,
-          Validators.email,
-          Validators.pattern(VALIDATION_PATTERNS.email),
+          Validators.email
         ],
       ],
       phone: [
