@@ -1,4 +1,6 @@
+import { PHOTOS, ROOMS } from './../../../constants/about_us.page';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-about-us',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutUsComponent implements OnInit {
 
-  constructor() { }
+  photos = PHOTOS;
+  rooms = ROOMS
+
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  navigateTo(): void {
+    this.router.navigate(['courses'])
   }
 
 }

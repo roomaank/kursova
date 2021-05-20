@@ -1,5 +1,28 @@
 <div class="wrapper">
-  <div class="wrapper__inner">
-      ejkfvnehjcb
+  <div class="photo__wrapper">
+    <img *ngFor="let photo of photos" [src]="photo.path" />
+  </div>
+  <div class="content__inner">
+    <div class="content__divider">Our Rooms</div>
+    <div class="content__rooms">
+      <div class="content__photo-wrapper">
+        <img *ngFor="let room of rooms" [src]="room.path" />
+      </div>
+    </div>
+    <div class="description__wrapper">
+      <div class="content__description">
+        <div class="content__description-top">
+          Not sure if this course is right for you?
+        </div>
+        <div class="content__description-main">
+          Are there any hesitations about the direction or type of courses?
+          Leave an application, take the test and start your journey. We will
+          show you the right direction!
+        </div>
+      </div>
+      <div class="description__button">
+        <button (click)="navigateTo()">Get Started</button>
+      </div>
+    </div>
   </div>
 </div>

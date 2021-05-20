@@ -1,6 +1,7 @@
 <div class="courses__wrapper">
   <div class="courses__inner">
     <div class="course__block" *ngFor="let course of courses">
+      <img class="course__block-discount" [src]="course.discountLogo">
       <div class="course__block-type">{{ course.type }}</div>
       <div class="course__block-descr">{{ course.description }}</div>
       <div class="course__block-days">

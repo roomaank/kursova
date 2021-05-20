@@ -32,6 +32,14 @@
     position: relative;
   }
 
+  &-discount {
+    height: 50px;
+    position: absolute;
+    top: -12%;
+    z-index: 10;
+    left: 95%;
+  }
+
   &-type {
     height: 48px;
     display: flex;
