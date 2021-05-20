@@ -1,4 +1,3 @@
-import { FieldErrors } from './../../../constants/error-mapping';
 import { TOOLTIPS_TEXT } from './../../../constants/tooltips';
 import { FormCreatorService } from './../../../services/form-creator.service';
 import { Component, OnInit } from '@angular/core';
