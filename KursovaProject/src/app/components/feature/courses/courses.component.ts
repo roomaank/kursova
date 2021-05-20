@@ -15,7 +15,9 @@ export class CoursesComponent implements OnInit {
     public dialog: MatDialog
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.scrollToTop();
+  }
 
   openDialog(): void {
     const dialogRef = this.dialog.open(ModalComponent);
@@ -23,5 +25,16 @@ export class CoursesComponent implements OnInit {
     // dialogRef.afterClosed().subscribe(result => {
     //   console.log(`Dialog result: ${result}`);
     // });
+  }
+
+  private scrollToTop(): void {
+    let scrollToTop = window.setInterval(() => {
+      let pos = window.pageYOffset;
+      if (pos > 0) {
+          window.scrollTo(0, pos - 20);
+      } else {
+          window.clearInterval(scrollToTop);
+      }
+  }, 3);
   }
 }

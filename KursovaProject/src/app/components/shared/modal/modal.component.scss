@@ -11,19 +11,19 @@
     align-items: flex-start;
     justify-content: flex-end;
 
-    // button {
-    //   height: 28px;
-    //   width: 28px;
-    //   background-color: transparent;
-    //   border: none;
-    //   background-image: url(../../../../assets/images/cancel.svg);
+    button {
+      height: 28px;
+      width: 28px;
+      background-color: transparent;
+      border: none;
+      background-image: url(../../../../assets/images/cancel.svg);
 
-    //   &:hover {
-    //     transform: rotate(90deg);
-    //     transition: 0.3s;
-    //     cursor: pointer;
-    //   }
-    // }
+      &:hover {
+        transform: rotate(90deg);
+        transition: 0.3s;
+        cursor: pointer;
+      }
+    }
   }
 
   &__wrapper {

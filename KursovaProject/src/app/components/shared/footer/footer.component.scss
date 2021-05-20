@@ -2,6 +2,7 @@
   &__wrapper {
     padding: 30px;
     box-shadow: 0 6px 6px rgb(10 16 20 / 15%), 0 0 52px rgb(10 16 20 / 12%);
+    position: relative;
   }
   &__content {
     height: 100%;
@@ -74,4 +75,18 @@
     text-align: center;
     color: #8e8e8e;
   }
+}
+
+.scroll__button{
+  display: flex;
+  width: 90%;
+  justify-content: flex-end;
+  position: absolute;
+  top: -20px;
+
+  img {
+    height: 60px;
+    cursor: pointer;
+  }
+
 }
