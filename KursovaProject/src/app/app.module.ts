@@ -16,6 +16,7 @@ import { signUpModalComponent } from './components/shared/sign-up-modal/sign-up-
 import { MatDialogModule } from '@angular/material/dialog';
 import { ControlWrapperComponent } from './components/shared/control-wrapper/control-wrapper.component';
 import { ErrorContentComponent } from './components/shared/error-content/error-content.component';
+import { DragScrollModule } from 'ngx-drag-scroll';
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent, FooterComponent, AboutUsComponent, CoursesComponent, ReviewsComponent, ContactsComponent, signUpModalComponent, ControlWrapperComponent, ErrorContentComponent],
@@ -29,7 +30,8 @@ import { ErrorContentComponent } from './components/shared/error-content/error-c
     ToastrModule.forRoot({
       timeOut: 3000,
       positionClass: 'toast-top-center',
-    })
+    }),
+    DragScrollModule
   ],
   providers: [],
   bootstrap: [AppComponent],

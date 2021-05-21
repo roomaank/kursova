@@ -32,26 +32,6 @@ $main-font: "Girassol", cursive;
     overflow: hidden;
   }
 
-  &__photo-wrapper {
-    padding: 20px;
-    padding-top: 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-
-    img {
-      width: 20%;
-      margin: 20px;
-      transform: rotate(0deg);
-
-      &:hover {
-        box-shadow: 0 6px 6px rgb(10 16 20 / 15%), 0 0 52px rgb(10 16 20 / 12%);
-        // transform: rotate(0deg);
-        transform: rotate(7deg);
-      }
-    }
-  }
-
   &__description {
     & {
       width: 60%;
@@ -96,4 +76,9 @@ $main-font: "Girassol", cursive;
       cursor: pointer;
     }
   }
+}
+
+.drag__img {
+  width: 25%;
+  height: 200px;
 }
