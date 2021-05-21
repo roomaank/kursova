@@ -31,9 +31,7 @@ export class ErrorContentComponent implements OnInit {
       return;
     }
 
-    console.log(errors);
     const fieldError = Object.keys(errors)[0];
-    console.log(fieldError);
     
     this.errorMessage = this.errorMappingKey
       ? FieldErrors[this.errorMappingKey][fieldError]

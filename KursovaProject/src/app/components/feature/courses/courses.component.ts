@@ -1,4 +1,4 @@
-import { ModalComponent } from './../../shared/modal/modal.component';
+import { SingUpModalComponent } from './../../shared/modal/modal.component';
 import { COURSES } from './../../../constants/courses.constants';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
@@ -9,7 +9,7 @@ import { MatDialog, MatDialogRef } from '@angular/material/dialog';
   styleUrls: ['./courses.component.scss'],
 })
 export class CoursesComponent implements OnInit {
-  fileNameDialogRef: MatDialogRef<ModalComponent>
+  fileNameDialogRef: MatDialogRef<SingUpModalComponent>
   courses = COURSES;
 
   constructor(public dialog: MatDialog) {}
@@ -19,7 +19,7 @@ export class CoursesComponent implements OnInit {
   }
 
   openDialog(): void {
-    this.dialog.open(ModalComponent);
+    this.dialog.open(SingUpModalComponent);
   }
 
   private scrollToTop(): void {

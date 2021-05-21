@@ -6,11 +6,11 @@ import { FormGroup, ValidationErrors } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
-  selector: 'app-modal',
+  selector: 'app-singUpModal',
   templateUrl: './modal.component.html',
   styleUrls: ['./modal.component.scss'],
 })
-export class ModalComponent implements OnInit {
+export class SingUpModalComponent implements OnInit {
   signUpCourseForm: FormGroup;
   tooltipText = TOOLTIPS_TEXT.signUpForm;
   formIsSubmitted: boolean;
@@ -18,7 +18,7 @@ export class ModalComponent implements OnInit {
   constructor(
     private formCreatorService: FormCreatorService,
     private toastr: ToastrService,
-    private dialogRef: MatDialogRef<ModalComponent>
+    private dialogRef: MatDialogRef<SingUpModalComponent>
   ) {}
 
   ngOnInit(): void {
@@ -28,8 +28,10 @@ export class ModalComponent implements OnInit {
   ngOnDestroy(): void {
     if (this.signUpCourseForm.valid) {
       this.toastr.success('Send');
+      this.signUpCourseForm.reset();
     } else {
       this.toastr.error('You have not filled out the form');
+      this.signUpCourseForm.reset();
     }
   }
 
@@ -46,6 +48,7 @@ export class ModalComponent implements OnInit {
     if (this.signUpCourseForm.valid) {
       this.dialogRef.close();
     }
+    this.signUpCourseForm.reset();
   }
 
   showError(fieldName: string): boolean {

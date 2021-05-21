@@ -1,10 +1,10 @@
-<div class="modal__wrapper">
-  <div class="modal__header">
+<div class="singUpModal__wrapper">
+  <div class="singUpModal__header">
     <button [mat-dialog-close]="true"></button>
   </div>
-  <div class="modal__inner">
-    <div class="modal__required"><sup>*</sup>Required fields</div>
-    <div class="modal__form">
+  <div class="singUpModal__inner">
+    <div class="singUpModal__required"><sup>*</sup>Required fields</div>
+    <div class="singUpModal__form">
       <form [class.submitted]="formIsSubmitted" [formGroup]="signUpCourseForm">
         <control-wrapper
           label="First Name"
@@ -16,7 +16,7 @@
           errorMappingKey="firstName"
         >
           <input
-            class="modal__control"
+            class="singUpModal__control"
             type="text"
             formControlName="firstName"
           />
@@ -32,7 +32,7 @@
           errorMappingKey="lastName"
         >
           <input
-            class="modal__control"
+            class="singUpModal__control"
             type="text"
             formControlName="lastName"
           />
@@ -47,7 +47,7 @@
           [fieldError]="getError('email')"
           errorMappingKey="email"
         >
-          <input class="modal__control" type="email" formControlName="email" />
+          <input class="singUpModal__control" type="email" formControlName="email" />
         </control-wrapper>
 
         <control-wrapper
@@ -59,7 +59,7 @@
           [fieldError]="getError('phone')"
           errorMappingKey="phone"
         >
-          <input class="modal__control" type="text" formControlName="phone" />
+          <input class="singUpModal__control" type="text" formControlName="phone" />
         </control-wrapper>
       </form>
       <div class="button__wrapper">

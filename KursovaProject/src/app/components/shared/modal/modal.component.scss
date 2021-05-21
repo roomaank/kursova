@@ -5,12 +5,12 @@
 }
 
 form.submitted {
-  .modal__control.ng-invalid {
+  .singUpModal__control.ng-invalid {
     border: 1px solid #cc2936;
   }
 }
 
-.modal {
+.singUpModal {
   &__header {
     height: 10%;
     display: flex;
