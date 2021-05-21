@@ -62,19 +62,19 @@ $main-font: "Girassol", cursive;
     &-top {
       font-size: 30px;
       font-family: $main-font;
-      color: white;
+      color: #ab8e69;
+      font-weight: bold;
     }
 
     &-main {
       font-style: italic;
-      color: white;
+      color: #ab8e69;
     }
   }
 }
 
 .description {
   &__wrapper {
-    background-color: #ab8e69;
     display: flex;
   }
   &__button {
@@ -88,9 +88,9 @@ $main-font: "Girassol", cursive;
       height: 40px;
       width: 40%;
       background-color: white;
+      border: 1px solid #ab8e69;
       color: #ab8e69;
       font-weight: bold;
-      border: none;
       border-radius: 3px;
       outline: none;
       cursor: pointer;
