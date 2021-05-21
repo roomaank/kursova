@@ -1,1 +1,61 @@
-<p>contacts works!</p>
+<div class="contact-wrapper">
+  <div class="flex__left">
+    <div class="flex__inside">
+      <p>Send us a Message</p>
+      <img src="./assets/images/contacts/message.svg">
+    </div>
+    <div class="flex__form">
+      <form class="form" id="form1">
+        <div>
+          <div class="form__div-radio">
+            <div>
+              <span>Student</span>
+              <input
+                type="radio"
+                id="radio1"
+                [defaultChecked]="true"
+                value=true
+                name="radio"
+                (change)="isChangedCheck($event)"/>
+            </div>
+            <div>
+              <span>Teacher</span>
+              <input
+                type="radio"
+                id="radio2"
+                value=false
+                name="radio"
+                (change)="isChangedCheck($event)"/>
+            </div>
+          </div>
+          <div [ngClass]="role?'form1':'form1-none'" id="student">
+            <div class="div-input">
+              <input type="text" placeholder="name" class="input"/>
+              <input type="text" placeholder="phone" class="input"/>
+            </div>
+            <div class="textarea">
+              <textarea  rows="5" cols="30"></textarea>
+            </div>
+          </div>
+        </div>
+        <!--        SECOND FORM-->
+          <div [ngClass]="role?'form2-none':'form1'" id="teacher">
+            <div class="div-input">
+              <input type="text" placeholder="name" class="input"/>
+              <input type="text" placeholder="phone" class="input"/>
+            </div>
+            <div class="textarea">
+              <textarea  rows="5" cols="30"></textarea>
+            </div>
+          </div>
+        <!--        SECOND FORM-->
+      </form>
+
+    </div>
+    <div class="flex__bottom">
+      <div class="line"></div>
+      <img src="assets/images/contacts/paper-plane.svg">
+    </div>
+  </div>
+  <div class="flex__right"></div>
+</div>

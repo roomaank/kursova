@@ -1,0 +1,138 @@
+.contact-wrapper {
+  display: flex;
+  justify-content: center;
+  height: 50%;
+  width: 60%;
+  margin: 65px auto;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 6px 6px rgb(10 16 20 / 15%), 0 0 52px rgb(10 16 20 / 12%);
+}
+
+.flex {
+  &__left {
+    height: 80%;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  &__right {
+    height: 100%;
+    width: 30%;
+    background-color: #ab8e69;
+  }
+
+  &__inside {
+    height: 30%;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+
+  }
+
+  &__inside p {
+    font-style: italic;
+    font-size: 24px;
+  }
+
+  &__inside img {
+    height: 30px;
+    width: 30px;
+  }
+
+  &__form {
+    display: flex;
+    height: 30%;
+    width: 80%;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    height: 10%;
+    width: 80%;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  &__bottom img {
+    height: 30px;
+    width: 30px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 40%;
+  }
+
+}
+
+.line {
+  width: 85%;
+  height: 0;
+  border: 1px solid #C4C4C4;
+  margin: 3px;
+  display: inline-block;
+}
+
+//FORM CHANGES
+.form1-none {
+  display: none
+}
+
+.form1 {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0 auto;
+  padding-left: 30px;
+}
+
+.form2-none {
+  display: none;
+}
+
+
+//FORM CHANGES
+.form {
+  &__div-radio {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+  }
+}
+
+.div-input {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+.div-input input {
+  height: 100%;
+  margin-top: 10px;
+}
+
+.input {
+  outline: none;
+  border: 1px solid #cccfd3;
+  border-radius: 4px;
+  line-height: 1.5rem;
+  font-size: 1rem;
+}
+
+.textarea textarea {
+  margin: 10px 0 0 40px;
+  resize: none;
+  border: 1px solid #cccfd3;
+  border-radius: 4px;
+}
