@@ -34,6 +34,7 @@ export class ErrorContentComponent implements OnInit {
       return;
     }
 
+    console.log(errors);
     const fieldError = Object.keys(errors)[0];
     console.log(fieldError);
     

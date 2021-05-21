@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/shared/header/header.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AboutUsComponent } from './components/feature/about-us/about-us.component';
 import { CoursesComponent } from './components/feature/courses/courses.component';
@@ -24,7 +25,10 @@ import { ErrorContentComponent } from './components/shared/error-content/error-c
     BrowserAnimationsModule,
     MatDialogModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ToastrModule.forRoot({
+      positionClass: 'toast-top-center',
+    })
   ],
   providers: [],
   bootstrap: [AppComponent],
