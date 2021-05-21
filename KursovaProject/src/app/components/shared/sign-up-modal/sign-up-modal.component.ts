@@ -4,6 +4,7 @@ import { FormCreatorService } from '../../../services/form-creator.service';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, ValidationErrors } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
+import { PHONE_MASK } from 'src/app/constants/masks';
 
 @Component({
   selector: 'app-singUpModal',
@@ -14,6 +15,7 @@ export class SingUpModalComponent implements OnInit {
   signUpCourseForm: FormGroup;
   tooltipText = TOOLTIPS_TEXT.signUpForm;
   formIsSubmitted: boolean;
+  phoneMask = PHONE_MASK;
 
   constructor(
     private formCreatorService: FormCreatorService,
@@ -23,6 +25,7 @@ export class SingUpModalComponent implements OnInit {
 
   ngOnInit(): void {
     this.initSignUpCourseForm();
+    console.log(this.phoneMask);
   }
 
   ngOnDestroy(): void {

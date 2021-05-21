@@ -16,7 +16,8 @@ export const FieldErrors = {
     email: 'Please use full email address with @ sign and domain.'
   },
   phone: {
-    required: 'Please enter your mobile phone number.'
+    required: 'Please enter your mobile phone number.',
+    pattern: 'Please enter a valid phone number'
   }
 
 };

@@ -47,7 +47,11 @@
           [fieldError]="getError('email')"
           errorMappingKey="email"
         >
-          <input class="singUpModal__control" type="email" formControlName="email" />
+          <input
+            class="singUpModal__control"
+            type="email"
+            formControlName="email"
+          />
         </control-wrapper>
 
         <control-wrapper
@@ -59,7 +63,12 @@
           [fieldError]="getError('phone')"
           errorMappingKey="phone"
         >
-          <input class="singUpModal__control" type="text" formControlName="phone" />
+          <input
+            class="singUpModal__control"
+            type="text"
+            formControlName="phone"
+            [mask]="phoneMask"
+          />
         </control-wrapper>
       </form>
       <div class="button__wrapper">
