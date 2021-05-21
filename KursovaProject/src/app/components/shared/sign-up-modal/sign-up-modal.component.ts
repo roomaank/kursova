@@ -1,14 +1,14 @@
 import { MatDialogRef } from '@angular/material/dialog';
-import { TOOLTIPS_TEXT } from './../../../constants/tooltips';
-import { FormCreatorService } from './../../../services/form-creator.service';
+import { TOOLTIPS_TEXT } from '../../../constants/tooltips';
+import { FormCreatorService } from '../../../services/form-creator.service';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, ValidationErrors } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-singUpModal',
-  templateUrl: './modal.component.html',
-  styleUrls: ['./modal.component.scss'],
+  templateUrl: './sign-up-modal.component.html',
+  styleUrls: ['./sign-up-modal.component.scss'],
 })
 export class SingUpModalComponent implements OnInit {
   signUpCourseForm: FormGroup;
@@ -26,12 +26,10 @@ export class SingUpModalComponent implements OnInit {
   }
 
   ngOnDestroy(): void {
-    if (this.signUpCourseForm.valid) {
+    if (this.signUpCourseForm.valid && this.formIsSubmitted) {
       this.toastr.success('Send');
-      this.signUpCourseForm.reset();
     } else {
       this.toastr.error('You have not filled out the form');
-      this.signUpCourseForm.reset();
     }
   }
 
@@ -48,7 +46,6 @@ export class SingUpModalComponent implements OnInit {
     if (this.signUpCourseForm.valid) {
       this.dialogRef.close();
     }
-    this.signUpCourseForm.reset();
   }
 
   showError(fieldName: string): boolean {

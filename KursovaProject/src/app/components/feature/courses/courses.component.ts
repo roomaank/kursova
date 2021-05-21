@@ -1,4 +1,4 @@
-import { SingUpModalComponent } from './../../shared/modal/modal.component';
+import { SingUpModalComponent } from '../../shared/sign-up-modal/sign-up-modal.component';
 import { COURSES } from './../../../constants/courses.constants';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
