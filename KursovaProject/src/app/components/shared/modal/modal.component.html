@@ -5,7 +5,7 @@
   <div class="modal__inner">
     <div class="modal__required"><sup>*</sup>Required fields</div>
     <div class="modal__form">
-      <form class="submitted" [formGroup]="signUpCourseForm">
+      <form [class.submitted]="formIsSubmitted" [formGroup]="signUpCourseForm">
         <control-wrapper
           label="First Name"
           [asterisk]="true"
