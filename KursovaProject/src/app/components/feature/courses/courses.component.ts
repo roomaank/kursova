@@ -11,6 +11,8 @@ import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 export class CoursesComponent implements OnInit {
   fileNameDialogRef: MatDialogRef<signUpModalComponent>
   courses = COURSES;
+  isLiked = false;
+  likedCourses = {};
 
   constructor(public dialog: MatDialog) {}
 
@@ -18,8 +20,18 @@ export class CoursesComponent implements OnInit {
     this.scrollToTop();
   }
 
-  openDialog(): void {
+  openSignUpDialog(): void {
     this.dialog.open(signUpModalComponent);
+  }
+
+  handleLikeClick(id: number): void {
+    console.log('Liked clicked');
+
+    if (this.likedCourses[id]) {
+      delete this.likedCourses[id];
+    } else {
+      this.likedCourses[id] = true;
+    }
   }
 
   private scrollToTop(): void {
