@@ -19,11 +19,7 @@ export class CoursesComponent implements OnInit {
   }
 
   openDialog(): void {
-    const fileNameDialogRef = this.dialog.open(ModalComponent);
-
-    // dialogRef.afterClosed().subscribe(result => {
-    //   console.log(`Dialog result: ${result}`);
-    // });
+    this.dialog.open(ModalComponent);
   }
 
   private scrollToTop(): void {
