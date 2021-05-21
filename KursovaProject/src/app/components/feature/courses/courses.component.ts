@@ -1,7 +1,7 @@
 import { ModalComponent } from './../../shared/modal/modal.component';
 import { COURSES } from './../../../constants/courses.constants';
 import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-courses',
@@ -9,6 +9,7 @@ import { MatDialog } from '@angular/material/dialog';
   styleUrls: ['./courses.component.scss'],
 })
 export class CoursesComponent implements OnInit {
+  fileNameDialogRef: MatDialogRef<ModalComponent>
   courses = COURSES;
 
   constructor(public dialog: MatDialog) {}
@@ -18,7 +19,7 @@ export class CoursesComponent implements OnInit {
   }
 
   openDialog(): void {
-    const dialogRef = this.dialog.open(ModalComponent);
+    const fileNameDialogRef = this.dialog.open(ModalComponent);
 
     // dialogRef.afterClosed().subscribe(result => {
     //   console.log(`Dialog result: ${result}`);

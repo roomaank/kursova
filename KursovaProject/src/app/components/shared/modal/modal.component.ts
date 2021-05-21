@@ -1,3 +1,4 @@
+import { MatDialogRef } from '@angular/material/dialog';
 import { TOOLTIPS_TEXT } from './../../../constants/tooltips';
 import { FormCreatorService } from './../../../services/form-creator.service';
 import { Component, OnInit } from '@angular/core';
@@ -17,6 +18,7 @@ export class ModalComponent implements OnInit {
   constructor(
     private formCreatorService: FormCreatorService,
     private toastr: ToastrService,
+    private dialogRef: MatDialogRef<ModalComponent>
   ) {}
 
   ngOnInit(): void {
@@ -24,12 +26,15 @@ export class ModalComponent implements OnInit {
   }
 
   ngOnDestroy(): void {
-    //TODO success toastr when form is valid and submitted
-    // if (this.formIsSubmitted && this.signUpCourseForm.valid) {
-    //   this.toastr.success('Test');
-    // }
+    if (this.signUpCourseForm.valid) {
+      this.toastr.success('Send');
+    } else {
+      this.toastr.error('You have not filled out the form');
+    }
+  }
 
-      this.toastr.success('Test');
+  get firstName() {
+    return this.signUpCourseForm.get('firstName');
   }
 
   private initSignUpCourseForm(): void {
@@ -38,7 +43,9 @@ export class ModalComponent implements OnInit {
 
   submitForm() {
     this.formIsSubmitted = true;
-    
+    if (this.signUpCourseForm.valid) {
+      this.dialogRef.close();
+    }
   }
 
   showError(fieldName: string): boolean {

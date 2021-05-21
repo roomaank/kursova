@@ -33,6 +33,7 @@ import { ErrorContentComponent } from './components/shared/error-content/error-c
   ],
   providers: [],
   bootstrap: [AppComponent],
+  entryComponents: [ModalComponent],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA ]
 })
 export class AppModule {}
