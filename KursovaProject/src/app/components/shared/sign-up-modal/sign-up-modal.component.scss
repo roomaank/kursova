@@ -5,12 +5,12 @@
 }
 
 form.submitted {
-  .singUpModal__control.ng-invalid {
+  .modal__control.ng-invalid {
     border: 1px solid #cc2936;
   }
 }
 
-.singUpModal {
+.modal {
   &__header {
     height: 10%;
     display: flex;
@@ -28,8 +28,6 @@ form.submitted {
   }
 
   &__wrapper {
-    width: 700px;
-    height: 500px;
     padding: 10px;
   }
 
@@ -40,12 +38,13 @@ form.submitted {
 
   &__required {
     height: 10%;
+    padding: 0 30px;
+    margin: 20px 0px;
     font-style: italic;
     text-align: end;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding: 0 30px;
   }
 
   &__form {
@@ -80,7 +79,7 @@ form.submitted {
   justify-content: center;
   align-items: center;
   height: 40px;
-  margin-top: 20px;
+  margin: 20px;
 
   button {
     background-color: #ab8e69;

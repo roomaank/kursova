@@ -7,11 +7,11 @@ import { ToastrService } from 'ngx-toastr';
 import { PHONE_MASK } from 'src/app/constants/masks';
 
 @Component({
-  selector: 'app-singUpModal',
+  selector: 'app-signUpModal',
   templateUrl: './sign-up-modal.component.html',
   styleUrls: ['./sign-up-modal.component.scss'],
 })
-export class SingUpModalComponent implements OnInit {
+export class signUpModalComponent implements OnInit {
   signUpCourseForm: FormGroup;
   tooltipText = TOOLTIPS_TEXT.signUpForm;
   formIsSubmitted: boolean;
@@ -20,7 +20,7 @@ export class SingUpModalComponent implements OnInit {
   constructor(
     private formCreatorService: FormCreatorService,
     private toastr: ToastrService,
-    private dialogRef: MatDialogRef<SingUpModalComponent>
+    private dialogRef: MatDialogRef<signUpModalComponent>
   ) {}
 
   ngOnInit(): void {
@@ -30,7 +30,7 @@ export class SingUpModalComponent implements OnInit {
 
   ngOnDestroy(): void {
     if (this.signUpCourseForm.valid && this.formIsSubmitted) {
-      this.toastr.success('Send');
+      this.toastr.success(`Thank you ${this.signUpCourseForm.controls.firstName.value} for your choice`);
     } else {
       this.toastr.error('You have not filled out the form');
     }

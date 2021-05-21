@@ -12,13 +12,13 @@ import { AboutUsComponent } from './components/feature/about-us/about-us.compone
 import { CoursesComponent } from './components/feature/courses/courses.component';
 import { ReviewsComponent } from './components/feature/reviews/reviews.component';
 import { ContactsComponent } from './components/feature/contacts/contacts.component';
-import { SingUpModalComponent } from './components/shared/sign-up-modal/sign-up-modal.component';
+import { signUpModalComponent } from './components/shared/sign-up-modal/sign-up-modal.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ControlWrapperComponent } from './components/shared/control-wrapper/control-wrapper.component';
 import { ErrorContentComponent } from './components/shared/error-content/error-content.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, AboutUsComponent, CoursesComponent, ReviewsComponent, ContactsComponent, SingUpModalComponent, ControlWrapperComponent, ErrorContentComponent],
+  declarations: [AppComponent, HeaderComponent, FooterComponent, AboutUsComponent, CoursesComponent, ReviewsComponent, ContactsComponent, signUpModalComponent, ControlWrapperComponent, ErrorContentComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -33,7 +33,7 @@ import { ErrorContentComponent } from './components/shared/error-content/error-c
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [SingUpModalComponent],
+  entryComponents: [signUpModalComponent],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA ]
 })
 export class AppModule {}
