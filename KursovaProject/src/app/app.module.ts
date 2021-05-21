@@ -18,6 +18,7 @@ import { ControlWrapperComponent } from './components/shared/control-wrapper/con
 import { ErrorContentComponent } from './components/shared/error-content/error-content.component';
 import { DragScrollModule } from 'ngx-drag-scroll';
 import { LikedComponent } from './components/shared/liked/liked.component';
+import { NgxMaskModule, IConfig } from 'ngx-mask'
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent, FooterComponent, AboutUsComponent, CoursesComponent, ReviewsComponent, ContactsComponent, signUpModalComponent, ControlWrapperComponent, ErrorContentComponent, LikedComponent],
@@ -32,7 +33,8 @@ import { LikedComponent } from './components/shared/liked/liked.component';
       timeOut: 3000,
       positionClass: 'toast-top-center',
     }),
-    DragScrollModule
+    DragScrollModule,
+    NgxMaskModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent],
