@@ -20,7 +20,6 @@
 .course__block {
   & {
     width: 25%;
-    min-height: 300px;
     padding: 20px;
     margin: 0 30px 70px;
     display: flex;
@@ -32,14 +31,6 @@
     position: relative;
   }
 
-  &-discount {
-    height: 50px;
-    position: absolute;
-    top: -12%;
-    z-index: 10;
-    left: 95%;
-  }
-
   &-type {
     height: 48px;
     display: flex;
@@ -49,50 +40,109 @@
     text-transform: uppercase;
     margin-bottom: 20px;
     position: absolute;
-    top: -30px;
-    width: 100%;
+    top: -25px;
+    background-color: #ab8e69;
+    color: white;
+    border-radius: 10px;
     padding: 0 10px;
     justify-content: center;
-    background-color: white;
     border: none;
-    color: #ab8e69;
-    border-top-right-radius: 50%;
-    border-top-left-radius: 50%;
-    box-shadow: 0 -5px 5px -5px #333;
   }
 
-  &-descr {
-    height: 150px;
-    margin-top: 10px;
+  &-subtype {
+    margin: 20px 0;
     font-style: italic;
+    color: maroon;
   }
 
   &-days {
+    width: 25%;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    &-title {
+      color: #545454;
+    }
+
+    &-count {
+      font-size: 16px;
+    }
+  }
+
+  &-price {
     height: 60px;
     font-size: 18px;
     display: flex;
     align-items: center;
-    width: 45%;
+    width: 60%;
     justify-content: space-around;
 
+    &-title {
+      color: #545454;
+    }
+
     &-count {
-      font-size: 30px;
+      font-size: 20px;
+      font-weight: bold;
       color: maroon;
+      display: flex;
+      align-items: center;
+
+      sub {
+        font-size: 10px;
+        margin-left: 5px;
+      }
     }
   }
 
   &-button {
     width: 100%;
+    display: flex;
+    justify-content: space-around;
 
     button {
       height: 30px;
       width: 40%;
-      background-color: #ab8e69;
-      color: #fff;
-      border: none;
+      background-color: transparent;
+    }
+
+    .more-info {
+      border: 2px solid #ab8e69;
+      color: #ab8e69;
+      font-weight: bold;
       border-radius: 3px;
       outline: none;
       cursor: pointer;
     }
+
+    .sign-in {
+      color: white;
+      background-color: #ab8e69;
+      font-weight: bold;
+      border-radius: 3px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+  }
+
+  &-like {
+    margin-bottom: 20px;
+
+    .button__like {
+      background-image: url(../../../../assets/images/heart.png);
+      height: 32px;
+      width: 32px;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+    }
+
+    .is-liked {
+      background-image: url(../../../../assets/images/heart-1.png);
+    }
+
   }
 }

@@ -1,40 +1,38 @@
 export const COURSES = [
   {
-    type: 'Online Full',
-    description:
-      'Study at home, in the office, at the resort from anywhere in the world. Online courses are designed to recreate live communication between teacher and students.',
-    days: 30,
+    type: 'Online',
+    subType: 'General lessons',
+    days: '30',
+    price: 30,
   },
   {
-    type: 'Live Full',
-    description:
-      'Studying in the offices of our company with personal communication with mentors and other students. Discuss questions, communicate with like-minded people live.',
-    days: 90,
+    type: 'Live',
+    subType: 'General lessons',
+    days: '50',
+    price: 90,
   },
   {
-    type: 'Online Individual',
-    description:
-      'Study at home, in the office, at the resort from anywhere in the world. Online courses are designed to recreate live communication between teacher and students.',
-    days: 50,
-    discountLogo: '../../../../assets/images/discount.svg'
+    type: 'Online',
+    subType: 'Private lessons',
+    days: '10',
+    price: 50,
   },
   {
-    type: 'Live Individual',
-    description:
-      'Studying in the offices of our company with personal communication with mentors and other students. Discuss questions, communicate with like-minded people live.',
-    days: 60,
+    type: 'Live',
+    subType: 'General lessons',
+    days: '120',
+    price: 60,
   },
   {
-    type: 'Online Individual',
-    description:
-      'Study at home, in the office, at the resort from anywhere in the world. Online courses are designed to recreate live communication between teacher and students.',
-    days: 120,
-    discountLogo: '../../../../assets/images/discount.svg'
+    type: 'Online',
+    subType: 'General lessons',
+    days: '90',
+    price: 120,
   },
   {
-    type: 'Live Individual',
-    description:
-      'Studying in the offices of our company with personal communication with mentors and other students. Discuss questions, communicate with like-minded people live.',
-    days: 365,
-  }
+    type: 'Live',
+    subType: 'Private lessons',
+    days: '365',
+    price: 365,
+  },
 ];

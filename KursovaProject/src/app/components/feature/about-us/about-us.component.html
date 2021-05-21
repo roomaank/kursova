@@ -5,9 +5,14 @@
   <div class="content__inner">
     <div class="content__divider">Our Rooms</div>
     <div class="content__rooms">
-      <div class="content__photo-wrapper">
-        <img *ngFor="let room of rooms" [src]="room.path" />
-      </div>
+      <drag-scroll>
+        <img
+          class="drag__img"
+          drag-scroll-item
+          *ngFor="let room of rooms"
+          [src]="room.path"
+        />
+      </drag-scroll>
     </div>
     <div class="description__wrapper">
       <div class="content__description">

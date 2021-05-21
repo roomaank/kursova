@@ -22,5 +22,5 @@ export const NAV_ITEMS = [
     icon: '../../../../assets/images/header/contacts.svg',
     path: 'contacts',
     isActive: false
-  },
+  }
 ];

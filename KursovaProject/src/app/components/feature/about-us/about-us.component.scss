@@ -32,26 +32,6 @@ $main-font: "Girassol", cursive;
     overflow: hidden;
   }
 
-  &__photo-wrapper {
-    padding: 20px;
-    padding-top: 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-
-    img {
-      width: 20%;
-      margin: 20px;
-      transform: rotate(0deg);
-
-      &:hover {
-        box-shadow: 0 6px 6px rgb(10 16 20 / 15%), 0 0 52px rgb(10 16 20 / 12%);
-        // transform: rotate(0deg);
-        transform: rotate(7deg);
-      }
-    }
-  }
-
   &__description {
     & {
       width: 60%;
@@ -62,19 +42,19 @@ $main-font: "Girassol", cursive;
     &-top {
       font-size: 30px;
       font-family: $main-font;
-      color: white;
+      color: #ab8e69;
+      font-weight: bold;
     }
 
     &-main {
       font-style: italic;
-      color: white;
+      color: #ab8e69;
     }
   }
 }
 
 .description {
   &__wrapper {
-    background-color: #ab8e69;
     display: flex;
   }
   &__button {
@@ -88,12 +68,17 @@ $main-font: "Girassol", cursive;
       height: 40px;
       width: 40%;
       background-color: white;
+      border: 1px solid #ab8e69;
       color: #ab8e69;
       font-weight: bold;
-      border: none;
       border-radius: 3px;
       outline: none;
       cursor: pointer;
     }
   }
+}
+
+.drag__img {
+  width: 25%;
+  height: 200px;
 }

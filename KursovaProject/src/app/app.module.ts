@@ -16,9 +16,12 @@ import { signUpModalComponent } from './components/shared/sign-up-modal/sign-up-
 import { MatDialogModule } from '@angular/material/dialog';
 import { ControlWrapperComponent } from './components/shared/control-wrapper/control-wrapper.component';
 import { ErrorContentComponent } from './components/shared/error-content/error-content.component';
+import { DragScrollModule } from 'ngx-drag-scroll';
+import { LikedComponent } from './components/shared/liked/liked.component';
+import { NgxMaskModule, IConfig } from 'ngx-mask'
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, AboutUsComponent, CoursesComponent, ReviewsComponent, ContactsComponent, signUpModalComponent, ControlWrapperComponent, ErrorContentComponent],
+  declarations: [AppComponent, HeaderComponent, FooterComponent, AboutUsComponent, CoursesComponent, ReviewsComponent, ContactsComponent, signUpModalComponent, ControlWrapperComponent, ErrorContentComponent, LikedComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -29,7 +32,9 @@ import { ErrorContentComponent } from './components/shared/error-content/error-c
     ToastrModule.forRoot({
       timeOut: 3000,
       positionClass: 'toast-top-center',
-    })
+    }),
+    DragScrollModule,
+    NgxMaskModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent],
