@@ -12,17 +12,12 @@
     justify-content: flex-end;
 
     button {
-      height: 28px;
-      width: 28px;
+      height: 18px;
+      width: 18px;
       background-color: transparent;
       border: none;
+      cursor: pointer;
       background-image: url(../../../../assets/images/cancel.svg);
-
-      &:hover {
-        transform: rotate(90deg);
-        transition: 0.3s;
-        cursor: pointer;
-      }
     }
   }
 

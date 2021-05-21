@@ -16,7 +16,7 @@ export class ModalComponent implements OnInit {
 
   constructor(
     private formCreatorService: FormCreatorService,
-    private toastr: ToastrService
+    private toastr: ToastrService,
   ) {}
 
   ngOnInit(): void {
@@ -24,9 +24,11 @@ export class ModalComponent implements OnInit {
   }
 
   ngOnDestroy(): void {
+    //TODO success toastr when form is valid and submitted
     // if (this.formIsSubmitted && this.signUpCourseForm.valid) {
     //   this.toastr.success('Test');
     // }
+
       this.toastr.success('Test');
   }
 
@@ -36,6 +38,7 @@ export class ModalComponent implements OnInit {
 
   submitForm() {
     this.formIsSubmitted = true;
+    
   }
 
   showError(fieldName: string): boolean {

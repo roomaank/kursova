@@ -1,3 +1,5 @@
+@import '~ngx-toastr/toastr';
+
 * {
   box-sizing: border-box;
 }
@@ -8,3 +10,7 @@ body {
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.toast-top-center {
+  margin-top: 40px;
+}

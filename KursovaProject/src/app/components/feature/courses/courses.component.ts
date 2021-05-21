@@ -1,7 +1,7 @@
 import { ModalComponent } from './../../shared/modal/modal.component';
 import { COURSES } from './../../../constants/courses.constants';
 import { Component, OnInit } from '@angular/core';
-import {MatDialog} from '@angular/material/dialog';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-courses',
@@ -11,9 +11,7 @@ import {MatDialog} from '@angular/material/dialog';
 export class CoursesComponent implements OnInit {
   courses = COURSES;
 
-  constructor(
-    public dialog: MatDialog
-  ) {}
+  constructor(public dialog: MatDialog) {}
 
   ngOnInit(): void {
     this.scrollToTop();
@@ -31,10 +29,10 @@ export class CoursesComponent implements OnInit {
     let scrollToTop = window.setInterval(() => {
       let pos = window.pageYOffset;
       if (pos > 0) {
-          window.scrollTo(0, pos - 20);
+        window.scrollTo(0, pos - 20);
       } else {
-          window.clearInterval(scrollToTop);
+        window.clearInterval(scrollToTop);
       }
-  }, 3);
+    }, 3);
   }
 }

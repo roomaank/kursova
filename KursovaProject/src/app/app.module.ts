@@ -27,6 +27,7 @@ import { ErrorContentComponent } from './components/shared/error-content/error-c
     FormsModule,
     ReactiveFormsModule,
     ToastrModule.forRoot({
+      timeOut: 3000,
       positionClass: 'toast-top-center',
     })
   ],
