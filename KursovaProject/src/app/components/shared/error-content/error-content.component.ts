@@ -18,9 +18,6 @@ export class ErrorContentComponent implements OnInit {
   errorMessage: string;
 
   ngOnInit(): void {
-    console.log(this.errorMappingKey);
-    console.log(this.show);
-    console.log(this.fieldErrors);
   }
 
   private defineErrorMessage(errors: ValidationErrors): void {
