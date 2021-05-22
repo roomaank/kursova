@@ -14,6 +14,7 @@ export class ControlWrapperComponent implements OnInit {
   @Input() showError: boolean;
   @Input() fieldError: ValidationErrors;
   @Input() errorMappingKey: string;
+  @Input() isSignUpComponent: boolean;
 
   constructor() {}
 

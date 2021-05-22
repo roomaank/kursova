@@ -1,8 +1,14 @@
 <div class="container">
-  <label *ngIf="label">
+  <label *ngIf="label" [class.changedColor]="isSignUpComponent">
     {{ label }}
     <span *ngIf="asterisk" class="label__asterisk"><sup>*</sup></span>
-    <img class="tooltip__icon" [src]="labelIcon" alt="">
+    <img
+      class="tooltip__icon"
+      [src]="
+        !isSignUpComponent ? labelIcon : '../../../../assets/images/tooltip-white.svg'
+      "
+      alt=""
+    />
   </label>
 </div>
 

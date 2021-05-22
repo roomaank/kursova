@@ -18,17 +18,18 @@ form.submitted {
     justify-content: flex-end;
 
     button {
-      height: 18px;
-      width: 18px;
+      height: 24px;
+      width: 24px;
       background-color: transparent;
       border: none;
       cursor: pointer;
-      background-image: url(../../../../assets/images/cancel.svg);
+      background-image: url(../../../../assets/images/cancel.png);
     }
   }
 
   &__wrapper {
     padding: 10px;
+    background-color: #0a0a0a;
   }
 
   &__inner {
