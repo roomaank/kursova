@@ -1,27 +1,21 @@
 import { COURSE_ITEM } from './../../../models/ICouse-item';
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { AfterContentInit, Component, OnDestroy, OnInit } from '@angular/core';
 
 @Component({
   selector: 'liked-courses',
   templateUrl: './liked-courses.component.html',
-  styleUrls: ['./liked-courses.component.scss']
+  styleUrls: ['./liked-courses.component.scss'],
 })
 export class LikedCoursesComponent implements OnInit {
+  likedCourses: COURSE_ITEM[] = [];
 
-  likedCourses: COURSE_ITEM[];
-
-  constructor() { 
-    this.populateLikedCourses();
-   }
+  constructor() {}
 
   ngOnInit(): void {
-    // console.log(JSON.parse(localStorage.getItem('likedCourses')));
+    this.populateLikedCourses();
   }
 
   populateLikedCourses(): void {
     this.likedCourses = JSON.parse(localStorage.getItem('likedCourses'));
-    console.log(this.likedCourses);
-    
   }
-
 }
