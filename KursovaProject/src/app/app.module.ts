@@ -1,4 +1,8 @@
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
+import {
+  CUSTOM_ELEMENTS_SCHEMA,
+  NgModule,
+  NO_ERRORS_SCHEMA,
+} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,28 +21,42 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { ControlWrapperComponent } from './components/shared/control-wrapper/control-wrapper.component';
 import { ErrorContentComponent } from './components/shared/error-content/error-content.component';
 import { DragScrollModule } from 'ngx-drag-scroll';
-import { LikedComponent } from './components/shared/liked/liked.component';
-import { NgxMaskModule, IConfig } from 'ngx-mask'
+import { NgxMaskModule } from 'ngx-mask';
+import { MatMenuModule } from '@angular/material/menu';
+import { LikedCoursesComponent } from './components/feature/liked-courses/liked-courses.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, AboutUsComponent, CoursesComponent, ReviewsComponent, ContactsComponent, signUpModalComponent, ControlWrapperComponent, ErrorContentComponent, LikedComponent],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    AboutUsComponent,
+    CoursesComponent,
+    ReviewsComponent,
+    ContactsComponent,
+    signUpModalComponent,
+    ControlWrapperComponent,
+    ErrorContentComponent,
+    LikedCoursesComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatDialogModule,
+    MatMenuModule,
     FormsModule,
     ReactiveFormsModule,
+    DragScrollModule,
     ToastrModule.forRoot({
       timeOut: 3000,
       positionClass: 'toast-top-center',
     }),
-    DragScrollModule,
-    NgxMaskModule.forRoot()
+    NgxMaskModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],
   entryComponents: [signUpModalComponent],
-  schemas: [ CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA ]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
 })
 export class AppModule {}

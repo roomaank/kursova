@@ -12,9 +12,13 @@
           {{ item.title }}
         </div>
       </div>
-      <button class="nav__item-liked">
-        <div class="nav__item-liked-count">1</div>
+      <button class="nav__item-liked" [mat-menu-trigger-for]="likedCourses">
+        <div class="nav__item-liked-count" *ngIf="likedCoursesCount > 0">{{ likedCoursesCount }}</div>
       </button>
     </div>
   </div>
 </div>
+
+<mat-menu #likedCourses>
+  <liked-courses></liked-courses>
+</mat-menu>

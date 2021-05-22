@@ -1,3 +1,4 @@
+import { LikedCoursesService } from './../../../services/liked-courses.service';
 import { signUpModalComponent } from '../../shared/sign-up-modal/sign-up-modal.component';
 import { COURSES } from './../../../constants/courses.constants';
 import { Component, OnInit } from '@angular/core';
@@ -15,7 +16,10 @@ export class CoursesComponent implements OnInit {
   likedCourses = {};
   likedCoursesArray: COURSE_ITEM[] = [];
 
-  constructor(public dialog: MatDialog) {}
+  constructor( 
+    public dialog: MatDialog,
+    public likedCoursesService: LikedCoursesService,
+    ) {}
 
   ngOnInit(): void {
     this.scrollToTop();
@@ -46,6 +50,7 @@ export class CoursesComponent implements OnInit {
       localStorage.setItem('likedCourses', JSON.stringify(likedCoursesArray));
       
       this.likedCoursesArray = likedCoursesArray;
+      this.likedCoursesService.likedCoursesLength$.next(this.likedCoursesArray.length);
     } else {
       this.likedCourses[course.id] = true;
 
@@ -62,6 +67,7 @@ export class CoursesComponent implements OnInit {
         'likedCourses',
         JSON.stringify(this.likedCoursesArray)
       );
+      this.likedCoursesService.likedCoursesLength$.next(this.likedCoursesArray.length);
     }
   }
 
