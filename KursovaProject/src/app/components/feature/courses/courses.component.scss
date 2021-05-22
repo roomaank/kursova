@@ -1,3 +1,5 @@
+$font: "Girassol", cursive;
+
 .courses {
   &__wrapper {
     padding: 0 30px;
@@ -50,8 +52,14 @@
     border: none;
   }
 
+  &-photo {
+    max-width: 100%;
+    margin-top: 10px;
+    border-radius: 5%;
+  }
+
   &-subtype {
-    margin: 20px 0;
+    margin: 10px 0;
     font-style: italic;
     color: maroon;
   }
@@ -62,10 +70,8 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-
-    &-title {
-      color: #545454;
-    }
+    color: #545454;
+    font-family: $font;
 
     &-count {
       font-size: 16px;
@@ -82,6 +88,7 @@
 
     &-title {
       color: #545454;
+      font-family: $font;
     }
 
     &-count {
@@ -130,7 +137,7 @@
   }
 
   &-like {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 
     .button__like {
       background-image: url(../../../../assets/images/heart.png);
@@ -146,4 +153,8 @@
     }
 
   }
+}
+
+.liked-block {
+  border: 1px solid red;
 }

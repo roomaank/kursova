@@ -5,6 +5,7 @@ export const COURSES = [
     subType: 'General lessons',
     days: '30',
     price: 30,
+    photoPath: "../../../../assets/images/room1.png"
   },
   { 
     id: 2,
@@ -12,6 +13,7 @@ export const COURSES = [
     subType: 'General lessons',
     days: '50',
     price: 90,
+    photoPath: "../../../../assets/images/room2.png"
   },
   { 
     id: 3,
@@ -19,6 +21,7 @@ export const COURSES = [
     subType: 'Private lessons',
     days: '10',
     price: 50,
+    photoPath: "../../../../assets/images/room3.png"
   },
   { 
     id: 4,
@@ -26,6 +29,7 @@ export const COURSES = [
     subType: 'General lessons',
     days: '120',
     price: 60,
+    photoPath: "../../../../assets/images/room3.png"
   },
   { 
     id: 5,
@@ -33,6 +37,7 @@ export const COURSES = [
     subType: 'General lessons',
     days: '90',
     price: 120,
+    photoPath: "../../../../assets/images/room5.png"
   },
   { 
     id: 6,
@@ -40,5 +45,6 @@ export const COURSES = [
     subType: 'Private lessons',
     days: '365',
     price: 365,
+    photoPath: "../../../../assets/images/room2.png"
   },
 ];
