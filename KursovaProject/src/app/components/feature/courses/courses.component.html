@@ -1,10 +1,10 @@
 <div class="courses__wrapper">
   <div class="courses__inner">
-    <div class="course__block" *ngFor="let course of courses; let i = index">
+    <div class="course__block" *ngFor="let course of courses">
       <div class="course__block-type">{{ course.type }}</div>
       <div class="course__block-subtype">{{ course.subType }}</div>
       <div class="course__block-like">
-        <button class="button__like" (click)="handleLikeClick(i)" [class.is-liked]="likedCourses[i]"></button>
+        <button class="button__like" (click)="handleLikeClick(course)" [class.is-liked]="likedCourses[course.id]"></button>
       </div>
       <div class="course__block-days">
         <div class="course__block-days-title">Days:</div>

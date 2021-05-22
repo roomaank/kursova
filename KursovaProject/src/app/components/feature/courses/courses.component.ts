@@ -2,6 +2,7 @@ import { signUpModalComponent } from '../../shared/sign-up-modal/sign-up-modal.c
 import { COURSES } from './../../../constants/courses.constants';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { COURSE_ITEM } from 'src/app/models/ICouse-item';
 
 @Component({
   selector: 'app-courses',
@@ -9,10 +10,10 @@ import { MatDialog, MatDialogRef } from '@angular/material/dialog';
   styleUrls: ['./courses.component.scss'],
 })
 export class CoursesComponent implements OnInit {
-  fileNameDialogRef: MatDialogRef<signUpModalComponent>
+  fileNameDialogRef: MatDialogRef<signUpModalComponent>;
   courses = COURSES;
-  isLiked = false;
   likedCourses = {};
+  likedCoursesArray: COURSE_ITEM[] = [];
 
   constructor(public dialog: MatDialog) {}
 
@@ -24,13 +25,43 @@ export class CoursesComponent implements OnInit {
     this.dialog.open(signUpModalComponent);
   }
 
-  handleLikeClick(id: number): void {
-    console.log('Liked clicked');
+  handleLikeClick(course: COURSE_ITEM): void {
+    if (this.likedCourses[course.id]) {
+      delete this.likedCourses[course.id];
 
-    if (this.likedCourses[id]) {
-      delete this.likedCourses[id];
+      let likedCoursesArray = localStorage.getItem('likedCourses')
+        ? JSON.parse(localStorage.getItem('likedCourses'))
+        : [];
+
+      let index;
+
+      for (let i = 0; i < likedCoursesArray.length; i++) {
+        if (likedCoursesArray[i].id === course.id) {
+          index = i;
+          break;
+        }
+      }
+
+      likedCoursesArray.splice(index, 1);
+      localStorage.setItem('likedCourses', JSON.stringify(likedCoursesArray));
+      
+      this.likedCoursesArray = likedCoursesArray;
     } else {
-      this.likedCourses[id] = true;
+      this.likedCourses[course.id] = true;
+
+      const courseItem = {
+        id: course.id,
+        type: course.type,
+        subType: course.subType,
+        days: course.days,
+        price: course.price,
+      };
+
+      this.likedCoursesArray = [...this.likedCoursesArray, courseItem];
+      localStorage.setItem(
+        'likedCourses',
+        JSON.stringify(this.likedCoursesArray)
+      );
     }
   }
 
