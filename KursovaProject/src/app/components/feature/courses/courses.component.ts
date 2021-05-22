@@ -63,9 +63,7 @@ export class CoursesComponent implements OnInit {
       };
 
       this.likedCoursesArray = [...this.likedCoursesArray, courseItem];
-      localStorage.setItem(
-        'likedCourses',
-        JSON.stringify(this.likedCoursesArray)
+      localStorage.setItem('likedCourses', JSON.stringify(this.likedCoursesArray)
       );
       this.likedCoursesService.likedCoursesLength$.next(this.likedCoursesArray.length);
     }

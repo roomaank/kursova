@@ -3,6 +3,7 @@
     padding: 0 30px;
     height: 100px;
     width: 100%;
+    background-color: #0a0a0a;
     box-shadow: 0 6px 6px rgb(10 16 20 / 15%), 0 0 52px rgb(10 16 20 / 12%);
     &-top {
       height: 100%;
@@ -16,6 +17,7 @@
   }
   &__logo {
     font-size: 30px;
+    color: white;
   }
   &__nav-menu {
     width: 50%;
@@ -39,7 +41,7 @@
   }
 
   &-liked {
-    background-image: url(../../../../assets/images/heart.png);
+    background-image: url(../../../../assets/images/heart-header.png);
     height: 32px;
     width: 32px;
     border: none;

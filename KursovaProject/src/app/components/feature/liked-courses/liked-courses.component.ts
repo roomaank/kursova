@@ -1,5 +1,5 @@
 import { COURSE_ITEM } from './../../../models/ICouse-item';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 
 @Component({
   selector: 'liked-courses',
@@ -10,14 +10,18 @@ export class LikedCoursesComponent implements OnInit {
 
   likedCourses: COURSE_ITEM[];
 
-  constructor() { }
+  constructor() { 
+    this.populateLikedCourses();
+   }
 
   ngOnInit(): void {
-    
+    // console.log(JSON.parse(localStorage.getItem('likedCourses')));
   }
 
   populateLikedCourses(): void {
-    // this.likedCourses = localStorage.getItem('likedCourses')
+    this.likedCourses = JSON.parse(localStorage.getItem('likedCourses'));
+    console.log(this.likedCourses);
+    
   }
 
 }

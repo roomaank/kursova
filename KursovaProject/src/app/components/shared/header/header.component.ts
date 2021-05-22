@@ -32,7 +32,7 @@ export class HeaderComponent implements OnInit {
 
   private getStorageLikedCoursesLength(): void {
     const parsedCoursesArray = JSON.parse(localStorage.getItem('likedCourses'));
-    this.likedCoursesCount = parsedCoursesArray.length;
+    this.likedCoursesCount = parsedCoursesArray?.length;
   }
 
   navigateTo(item: any): void {
