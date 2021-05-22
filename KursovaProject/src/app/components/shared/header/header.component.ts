@@ -9,12 +9,15 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
   nav_items = NAV_ITEMS;
+  likedCoursesCount: number
 
   constructor(private router: Router) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
 
   navigateTo(item: any): void {
     this.router.navigate([item.path]);
   }
+
 }

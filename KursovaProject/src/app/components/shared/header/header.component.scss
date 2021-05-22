@@ -37,4 +37,24 @@
     height: 24px;
     margin-right: 10px;
   }
+
+  &-liked {
+    background-image: url(../../../../assets/images/heart.png);
+    height: 32px;
+    width: 32px;
+    border: none;
+    background-color: transparent;
+    position: relative;
+
+    &-count {
+      position: absolute;
+      height: 15px;
+      width: 15px;
+      background-color: red;
+      border-radius: 50%;
+      left: 80%;
+      bottom: 60%;
+      color: white;
+    }
+  }
 }
