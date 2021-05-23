@@ -1,5 +1,25 @@
 $font: "Girassol", cursive;
 
+::ng-deep {
+  .mat-paginator-container {
+    max-width: 1150px;
+    width: 80% !important;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    margin-top: -80px;
+  }
+
+  .mat-paginator-page-size-label {
+    display: none;
+  }
+
+  .mat-paginator-range-label {
+    color: #545454;
+    font-family: "Girassol", cursive;
+  }
+
+}
+
 .courses {
   &__wrapper {
     padding: 0 30px;
@@ -83,7 +103,7 @@ $font: "Girassol", cursive;
     font-size: 18px;
     display: flex;
     align-items: center;
-    width: 60%;
+    width: 65%;
     justify-content: space-around;
 
     &-title {

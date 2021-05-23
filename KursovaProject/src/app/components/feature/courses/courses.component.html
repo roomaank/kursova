@@ -1,11 +1,19 @@
 <div class="courses__wrapper">
   <div class="courses__inner">
-    <div class="course__block" *ngFor="let course of courses" [class.liked-block]="likedCourses[course.id]">
+    <div
+      class="course__block"
+      *ngFor="let course of (courses | slice: lowValue : highValue)"
+      [class.liked-block]="likedCourses[course.id]"
+    >
       <div class="course__block-type">{{ course.type }}</div>
-      <img class="course__block-photo" [src]="course.photoPath" alt="">
+      <img class="course__block-photo" [src]="course.photoPath" alt="" />
       <div class="course__block-subtype">{{ course.subType }}</div>
       <div class="course__block-like">
-        <button class="button__like" (click)="handleLikeClick(course)" [class.is-liked]="likedCourses[course.id]"></button>
+        <button
+          class="button__like"
+          (click)="handleLikeClick(course)"
+          [class.is-liked]="likedCourses[course.id]"
+        ></button>
       </div>
       <div class="course__block-days">
         <div>Days:</div>
@@ -13,12 +21,21 @@
       </div>
       <div class="course__block-price">
         <div class="course__block-price-title">Price:</div>
-        <div class="course__block-price-count">{{ course.price }}$ <sub>per month</sub></div>
+        <div class="course__block-price-count">
+          {{ course.price }}$ <sub>per month</sub>
+        </div>
       </div>
       <div class="course__block-button">
-        <button class="more-info">More Info</button>
+        <button class="more-info" (click)="openMoreInfoDialog(course)">More Info</button>
         <button class="sign-in" (click)="openSignUpDialog()">Sign Up</button>
       </div>
     </div>
   </div>
+  <mat-paginator
+    [length]="courses?.length"
+    [pageSize]="currentQuantity"
+    [pageSizeOptions]="pageSizeOptions"
+    (page)="showDataPage($event)"
+  >
+  </mat-paginator>
 </div>

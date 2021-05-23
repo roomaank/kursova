@@ -1,7 +1,7 @@
 export interface COURSE_ITEM {
-    id : number;
+    id : string;
     type: string;
     subType: string;
     days: string;
-    price: number
+    price: string
 }
