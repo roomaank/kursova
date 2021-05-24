@@ -10,6 +10,12 @@ export class ContactsComponent implements OnInit {
   constructor() { }
 
   role = true;
+  experience = false;
+  check1 = false;
+  check2 = false;
+  check3 = false;
+
+
 
   ngOnInit(): void {
   }
@@ -18,6 +24,24 @@ export class ContactsComponent implements OnInit {
     // @ts-ignore
     const value = e.target.value;
     this.role = !this.role;
-    console.log(this.role)
+  }
+
+  isExperienceCheck(e: Event): void {
+    // @ts-ignore
+    const value = e.target.value;
+    this.experience = !this.experience
+    console.log(this.experience)
+  }
+
+  onlyOne(e: Event): void {
+    // @ts-ignore
+    const id = e.target.id
+    if (id === 'check1'){
+      this.check1 = true;
+      this.check2 = false
+    } else if (id === 'check2') {
+      this.check1 = false;
+      this.check2 = true
+    }
   }
 }

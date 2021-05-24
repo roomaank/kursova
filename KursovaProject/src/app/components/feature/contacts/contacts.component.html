@@ -6,26 +6,28 @@
     </div>
     <div class="flex__form">
       <form class="form" id="form1">
-        <div>
+        <div class="form__wrapper">
           <div class="form__div-radio">
             <div>
-              <span>Student</span>
               <input
                 type="radio"
+                class="custom-radio"
                 id="radio1"
                 [defaultChecked]="true"
                 value=true
                 name="radio"
                 (change)="isChangedCheck($event)"/>
+              <label class="form__span-style" for="radio1">I want to be a Student</label>
             </div>
             <div>
-              <span>Teacher</span>
               <input
+                class="custom-radio"
                 type="radio"
                 id="radio2"
                 value=false
                 name="radio"
                 (change)="isChangedCheck($event)"/>
+              <label class="form__span-style" for="radio2">I want to be a Teacher</label>
             </div>
           </div>
           <div [ngClass]="role?'form1':'form1-none'" id="student">
@@ -34,21 +36,68 @@
               <input type="text" placeholder="phone" class="input"/>
             </div>
             <div class="textarea">
-              <textarea  rows="5" cols="30"></textarea>
+              <textarea rows="5" cols="30"></textarea>
             </div>
           </div>
-        </div>
-        <!--        SECOND FORM-->
+          <!--        SECOND FORM-->
           <div [ngClass]="role?'form2-none':'form1'" id="teacher">
             <div class="div-input">
               <input type="text" placeholder="name" class="input"/>
               <input type="text" placeholder="phone" class="input"/>
             </div>
             <div class="textarea">
-              <textarea  rows="5" cols="30"></textarea>
+              <div class="flex__input-wrapper">
+                <div class="flex__input">
+                  <div>
+                    <input
+                      id="radio3"
+                      class="custom-radio"
+                      type="radio"
+                      name="experience"
+                      (change)="isExperienceCheck($event)"/>
+                    <label for="radio3" class="form__span-style">I have experience</label>
+                  </div>
+                  <div>
+                    <input
+                      id="radio4"
+                      type="radio"
+                      class="custom-radio"
+                      name="experience"
+                      [defaultChecked]="true"
+                      (change)="isExperienceCheck($event)"/>
+                    <label for="radio4" class="form__span-style">I haven't experience</label>
+                  </div>
+                </div>
+                <div [ngClass]="experience?'flex__checkbox':'flex__checkbox-none'">
+                  <div class="flex__flex-row">
+                    <input
+                      class="custom-checkbox"
+                      type="checkbox"
+                      [(ngModel)]="check1"
+                      id="check1"
+                      name="checkbox1"
+                      (click)="onlyOne($event)"/>
+                    <label for="check1" class="form__span-style">>1 year</label>
+                  </div>
+                  <div class="flex__flex-row">
+                    <input
+                      class="custom-checkbox"
+                      type="checkbox"
+                      [(ngModel)]="check2"
+                      id="check2"
+                      name="checkbox2"
+                      (click)="onlyOne($event)"/>
+                    <label class="form__span-style" for="check2"><1 year</label>
+
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        <!--        SECOND FORM-->
+
+          <!--        SECOND FORM-->
+        </div>
+
       </form>
 
     </div>
@@ -57,5 +106,27 @@
       <img src="assets/images/contacts/paper-plane.svg">
     </div>
   </div>
-  <div class="flex__right"></div>
+
+  <div class="flex__right">
+    <div class="flex__right-wrapper">
+      <div class="flex__inside">
+        <p>Contact info</p>
+      </div>
+      <div class="flex__column">
+        <div class="flex__column-inside">
+          <img src="./assets/images/contacts/position.svg">
+          <span>Lorem ipsum dolor sit.</span>
+        </div>
+        <div class="flex__column-inside">
+          <img src="./assets/images/contacts/smartphone.svg">
+          <span>000 000 00 0</span>
+        </div>
+        <div class="flex__column-inside">
+          <img src="./assets/images/contacts/email.svg">
+          <span>example@gmail.com</span>
+        </div>
+      </div>
+    </div>
+    <img src="assets/images/contacts/supr.png" class="img">
+  </div>
 </div>
