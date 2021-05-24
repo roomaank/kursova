@@ -20,6 +20,7 @@ export class AboutUsComponent implements OnInit {
 
   navigateTo(): void {
     this.router.navigate(['courses'])
+
   }
 
 }
