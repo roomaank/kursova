@@ -16,7 +16,7 @@
           errorMappingKey="firstName"
         >
           <input
-            class="modal__control"
+            class="control"
             type="text"
             formControlName="firstName"
           />
@@ -32,7 +32,7 @@
           errorMappingKey="lastName"
         >
           <input
-            class="modal__control"
+            class="control"
             type="text"
             formControlName="lastName"
           />
@@ -47,7 +47,7 @@
           [fieldError]="getError('email')"
           errorMappingKey="email"
         >
-          <input class="modal__control" type="email" formControlName="email" />
+          <input class="control" type="email" formControlName="email" />
         </control-wrapper>
 
         <control-wrapper
@@ -60,7 +60,7 @@
           errorMappingKey="phone"
         >
           <input
-            class="modal__control"
+            class="control"
             type="text"
             formControlName="phone"
             [mask]="phoneMask"
