@@ -2,7 +2,13 @@
   <label *ngIf="label">
     {{ label }}
     <span *ngIf="asterisk" class="label__asterisk"><sup>*</sup></span>
-    <img class="tooltip__icon" [src]="labelIcon" alt="">
+    <img
+      class="tooltip__icon"
+      [src]="labelIcon"
+      alt=""
+      [matTooltipPosition]="position.value"
+      matTooltip="{{ tooltipText }}"
+    />
   </label>
 </div>
 

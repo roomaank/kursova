@@ -1,3 +1,25 @@
+$font: "Girassol", cursive;
+
+::ng-deep {
+  .mat-paginator-container {
+    max-width: 1150px;
+    width: 80% !important;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    margin-top: -80px;
+  }
+
+  .mat-paginator-page-size-label {
+    display: none;
+  }
+
+  .mat-paginator-range-label {
+    color: #545454;
+    font-family: "Girassol", cursive;
+  }
+
+}
+
 .courses {
   &__wrapper {
     padding: 0 30px;
@@ -27,12 +49,13 @@
     align-items: center;
     text-align: center;
     box-shadow: 0 6px 6px rgb(10 16 20 / 15%), 0 0 52px rgb(10 16 20 / 12%);
+    border: 1px solid #0a0a0a;
     border-radius: 5%;
     position: relative;
   }
 
   &-type {
-    height: 48px;
+    height: 38px;
     display: flex;
     align-items: center;
     font-family: "Oswald", Helvetica, Arial, sans-serif;
@@ -40,7 +63,7 @@
     text-transform: uppercase;
     margin-bottom: 20px;
     position: absolute;
-    top: -25px;
+    top: -20px;
     background-color: #ab8e69;
     color: white;
     border-radius: 10px;
@@ -49,8 +72,14 @@
     border: none;
   }
 
+  &-photo {
+    max-width: 100%;
+    margin-top: 10px;
+    border-radius: 5%;
+  }
+
   &-subtype {
-    margin: 20px 0;
+    margin: 10px 0;
     font-style: italic;
     color: maroon;
   }
@@ -61,10 +90,8 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-
-    &-title {
-      color: #545454;
-    }
+    color: #545454;
+    font-family: $font;
 
     &-count {
       font-size: 16px;
@@ -76,11 +103,12 @@
     font-size: 18px;
     display: flex;
     align-items: center;
-    width: 60%;
+    width: 65%;
     justify-content: space-around;
 
     &-title {
       color: #545454;
+      font-family: $font;
     }
 
     &-count {
@@ -129,7 +157,7 @@
   }
 
   &-like {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 
     .button__like {
       background-image: url(../../../../assets/images/heart.png);
@@ -145,4 +173,8 @@
     }
 
   }
+}
+
+.liked-block {
+  border: 1px solid red;
 }

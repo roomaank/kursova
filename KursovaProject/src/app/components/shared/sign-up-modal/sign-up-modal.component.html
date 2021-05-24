@@ -10,7 +10,7 @@
           label="First Name"
           [asterisk]="true"
           [labelIcon]="'assets/images/tooltip.svg'"
-          [tooltipText]="tooltipText"
+          [tooltipText]="tooltipText.firstName"
           [showError]="showError('firstName')"
           [fieldError]="getError('firstName')"
           errorMappingKey="firstName"
@@ -26,7 +26,7 @@
           label="Last Name"
           [asterisk]="true"
           [labelIcon]="'assets/images/tooltip.svg'"
-          [tooltipText]="tooltipText"
+          [tooltipText]="tooltipText.lastName"
           [showError]="showError('lastName')"
           [fieldError]="getError('lastName')"
           errorMappingKey="lastName"
@@ -42,23 +42,19 @@
           label="Email"
           [asterisk]="true"
           [labelIcon]="'assets/images/tooltip.svg'"
-          [tooltipText]="tooltipText"
+          [tooltipText]="tooltipText.email"
           [showError]="showError('email')"
           [fieldError]="getError('email')"
           errorMappingKey="email"
         >
-          <input
-            class="modal__control"
-            type="email"
-            formControlName="email"
-          />
+          <input class="modal__control" type="email" formControlName="email" />
         </control-wrapper>
 
         <control-wrapper
           label="Phone"
           [asterisk]="true"
           [labelIcon]="'assets/images/tooltip.svg'"
-          [tooltipText]="tooltipText"
+          [tooltipText]="tooltipText.phone"
           [showError]="showError('phone')"
           [fieldError]="getError('phone')"
           errorMappingKey="phone"

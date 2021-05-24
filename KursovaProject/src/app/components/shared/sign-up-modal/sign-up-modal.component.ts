@@ -25,7 +25,6 @@ export class signUpModalComponent implements OnInit {
 
   ngOnInit(): void {
     this.initSignUpCourseForm();
-    console.log(this.phoneMask);
   }
 
   ngOnDestroy(): void {

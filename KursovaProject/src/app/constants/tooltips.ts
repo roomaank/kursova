@@ -1,8 +1,8 @@
 export const TOOLTIPS_TEXT = {
     signUpForm: {
-        firstName: 'Enter the first name of the user.',
-        lastName: 'Enter the last name of the user.',
-        email: 'Enter the email address of the user.',
-        phone: 'Enter the valid phone number '
+        firstName: 'Enter your first name.',
+        lastName: 'Enter your last name.',
+        email: 'Enter your email.',
+        phone: 'Enter your phone.'
     }
 }
