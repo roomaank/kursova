@@ -9,7 +9,6 @@
         <control-wrapper
           label="First Name"
           [asterisk]="true"
-          [isSignUpComponent]="true"
           [labelIcon]="'assets/images/tooltip.svg'"
           [tooltipText]="tooltipText"
           [showError]="showError('firstName')"
@@ -26,7 +25,6 @@
         <control-wrapper
           label="Last Name"
           [asterisk]="true"
-          [isSignUpComponent]="true"
           [labelIcon]="'assets/images/tooltip.svg'"
           [tooltipText]="tooltipText"
           [showError]="showError('lastName')"
@@ -43,24 +41,18 @@
         <control-wrapper
           label="Email"
           [asterisk]="true"
-          [isSignUpComponent]="true"
           [labelIcon]="'assets/images/tooltip.svg'"
           [tooltipText]="tooltipText"
           [showError]="showError('email')"
           [fieldError]="getError('email')"
           errorMappingKey="email"
         >
-          <input
-            class="modal__control"
-            type="email"
-            formControlName="email"
-          />
+          <input class="modal__control" type="email" formControlName="email" />
         </control-wrapper>
 
         <control-wrapper
           label="Phone"
           [asterisk]="true"
-          [isSignUpComponent]="true"
           [labelIcon]="'assets/images/tooltip.svg'"
           [tooltipText]="tooltipText"
           [showError]="showError('phone')"
