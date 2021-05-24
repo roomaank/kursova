@@ -30,6 +30,7 @@ export class CoursesComponent implements OnInit {
 
   ngOnInit(): void {
     this.scrollToTop();
+    this.initLikedCourses();
   }
 
   openSignUpDialog(): void {
@@ -85,6 +86,11 @@ export class CoursesComponent implements OnInit {
         this.likedCoursesArray.length
       );
     }
+  }
+
+  private initLikedCourses(): void {
+    const parsedLikedCourses = JSON.parse(localStorage.getItem('likedCourses'));
+    console.log(parsedLikedCourses);
   }
 
   showDataPage(e) {

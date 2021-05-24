@@ -19,6 +19,7 @@ import { ContactsComponent } from './components/feature/contacts/contacts.compon
 import { signUpModalComponent } from './components/shared/sign-up-modal/sign-up-modal.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { ControlWrapperComponent } from './components/shared/control-wrapper/control-wrapper.component';
 import { ErrorContentComponent } from './components/shared/error-content/error-content.component';
 import { DragScrollModule } from 'ngx-drag-scroll';
@@ -48,6 +49,7 @@ import { MoreInfoDialogComponent } from './components/feature/more-info-dialog/m
     BrowserAnimationsModule,
     MatDialogModule,
     MatMenuModule,
+    MatTooltipModule,
     MatPaginatorModule,
     FormsModule,
     ReactiveFormsModule,

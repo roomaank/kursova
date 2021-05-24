@@ -1,5 +1,6 @@
-import { ValidationErrors } from '@angular/forms';
+import { FormControl, ValidationErrors } from '@angular/forms';
 import { Component, Input, OnInit } from '@angular/core';
+import { TooltipPosition } from '@angular/material/tooltip';
 
 @Component({
   selector: 'control-wrapper',
@@ -10,11 +11,13 @@ export class ControlWrapperComponent implements OnInit {
   @Input() label: string;
   @Input() asterisk: boolean;
   @Input() labelIcon: string;
-  @Input() tooltipText: any;
+  @Input() tooltipText: string;
   @Input() showError: boolean;
   @Input() fieldError: ValidationErrors;
   @Input() errorMappingKey: string;
-  @Input() isSignUpComponent: boolean;
+
+  positionOptions: TooltipPosition[] = ['after', 'before', 'above', 'below', 'left', 'right'];
+  position = new FormControl(this.positionOptions[2]);
 
   constructor() {}
 

@@ -3,5 +3,5 @@ export interface COURSE_ITEM {
     type: string;
     subType: string;
     days: string;
-    price: string
+    price: string;
 }
