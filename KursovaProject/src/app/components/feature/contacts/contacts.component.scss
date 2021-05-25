@@ -1,9 +1,10 @@
 .contact-wrapper {
   display: flex;
   justify-content: center;
-  height: 50%;
-  width: 60%;
-  margin: 65px auto;
+  max-width: 1150px;
+  width: 100%;
+  margin: 20px auto;
+  height: 80%;
   align-content: center;
   align-items: center;
   text-align: center;
@@ -31,24 +32,6 @@
   &__right .img {
     height: 0px;
     width: 0px;
-  }
-
-  &__right:hover {
-    width: 100%;
-    transition-duration: .7s;
-  }
-
-  &__right:hover .img {
-    height: 250px;
-    width: 250px;
-    position: absolute;
-    right: 450px;
-    top: 200px;
-    transition-duration: .7s;
-  }
-
-  &__right:hover  {
-    flex-direction: row;
   }
 
   &__right-wrapper {
@@ -224,14 +207,6 @@
 .div-input input {
   height: 100%;
   margin-top: 10px;
-}
-
-.input {
-  outline: none;
-  border: 1px solid #cccfd3;
-  border-radius: 4px;
-  line-height: 1.5rem;
-  font-size: 1rem;
 }
 
 .textarea textarea {

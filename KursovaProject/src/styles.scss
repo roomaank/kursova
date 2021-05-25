@@ -14,3 +14,19 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .toast-top-center {
   margin-top: 40px;
 }
+
+.control {
+  width: 100%;
+  margin: 10px 0;
+  outline: none;
+  border: 1px solid #cccfd3;
+  border-radius: 4px;
+  padding: 10px;
+  padding-right: 36px;
+  line-height: 1.5rem;
+  font-size: 1rem;
+
+  &.ng-invalid.ng-touched {
+    border: 1px solid #cc2936;
+  }
+}
