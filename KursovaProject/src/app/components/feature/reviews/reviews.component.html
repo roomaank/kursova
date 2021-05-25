@@ -1,1 +1,230 @@
-<div>HELLO WORLD</div>
+<div class="reviews__wrapper">
+  <div class="reviews__first-div">
+    <div class="first-div__left">
+      <div class="first-div__wrapper">
+        <div>
+          <p class="p__bigger-letter">Lorem ipsum</p>
+          <p class="p__big-letter">Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div>
+          <p class="p__small-letter"><b>Lorem ipsum</b> dolor sit amet, consectetur adipisicing elit. Assumenda commodi
+            consectetur, deserunt dolor doloribus dolorum, eius et expedita illum ipsam labore laborum necessitatibus,
+            non rerum saepe sed similique sit soluta!</p>
+          <p class="p__small-letter"><b>Lorem ipsum</b> sit amet, consectetur adipisicing elit. Assumenda commodi
+            consectetur, deserunt dolor doloribus dolorum, eius et expedita illum ipsam labore laborum necessitatibus,
+            non rerum saepe sed similique sit soluta!</p>
+        </div>
+      </div>
+    </div>
+
+    <div [ngClass]="onPlay?'display-none':'video-box'">
+      <div [ngClass]="onPlay?'display-none':'play-btn'" (click)="play($event)">
+        <img src="./assets/images/reviews/play-button.svg">
+      </div>
+    </div>
+
+    <div [ngClass]="close?'close-img':'display-none'">
+      <div [ngClass]="onPlay?'video is-active':'display-none'">
+        <iframe width="800" height="515" src="https://www.youtube.com/embed/lhFU5H5KPFE" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        <div [ngClass]="close?'close-img':'display-none'" (click)="isClosed($event)">
+          <img src="./assets/images/reviews/close.svg">
+        </div>
+      </div>
+    </div>
+
+    <div class="first-div__right">
+    </div>
+
+  </div>
+
+  <div class="reviews__second-div">
+    <div class="second__top-flex">
+      <p class="p__second-big-letter">МИ СПІВПРАЦЮЄМО</p>
+      <p class="p__big-letter">З ЛІДЕРАМИ ІТ-РИНКУ</p>
+    </div>
+    <div class="second__bottom-flex">
+      <div class="second__inside">
+        <img src="assets/images/reviews/company/binariks.png">
+        <img src="assets/images/reviews/company/elex.png">
+        <img src="assets/images/reviews/company/globallogi.png">
+        <img src="assets/images/reviews/company/Incora.jpg">
+      </div>
+      <div class="second__inside">
+        <img src="assets/images/reviews/company/epam.png">
+        <img src="assets/images/reviews/company/N-iX_logo.jpg">
+        <img src="assets/images/reviews/company/rolique.png">
+        <img src="assets/images/reviews/company/SoftServe.png">
+      </div>
+    </div>
+  </div>
+
+  <div class="reviews__third-div">
+    <div class="third__top-flex">
+      <p class="p__second-big-letter gold">МИ СПІВПРАЦЮЄМО</p>
+      <p class="p__big-letter white">З ЛІДЕРАМИ ІТ-РИНКУ</p>
+    </div>
+    <div class="third__bottom-flex">
+      <div class="third__inside">
+        <p class="third__p-small">Починаючи з 2016 року ми відточували наші методи навчання і знайшли найбільш дієвий
+          спосіб, який дає можливість студентам опановувати програму краще і в більшому об'ємі.</p>
+        <ul>
+          <li class="third__li-text-style">Лекційний матеріал подається окремо. Це дає змогу зосередитись на
+            ознайомленні з ним не відволікаючись на виконання будь-яких дій.
+          </li>
+          <li class="third__li-text-style">Практичні заняття проходять в окремі дні і включають завдання по попередній
+            лекції. При цьому, частина завдань не містить абстрактних умов. Це дає змогу чітко закріпити пройдений
+            матеріал. Але є завдання, які змусять вас розвиватись, оскільки будуть вже більш абстрактними, і їх
+            виконання буде залежити від вашої уяви.
+          </li>
+          <li class="third__li-text-style">Як результат поєднання попередніх фактори ви опануєте теоретичну частину,
+            закріпите її на практиці в двох різновидах завдань.
+          </li>
+        </ul>
+        <p class="third__p-small">Під час створення програми навчання ми спирались на новітні технології та рекомендації
+          наших партнерів, щоб після закінчення навчання ви могли швидше влаштуватись на роботу.</p>
+      </div>
+      <div class="third__inside">
+        <carousel [width]="600"
+                  [cellWidth]="'100%'"
+                  [arrowsOutside]="true"
+                  [autoplay]="true"
+                  [dots]="true"
+                  [loop]="true">
+          <div class="carousel-cell">
+            <img src="./assets/images/reviews/carousel/gl9459.jpg">
+          </div>
+          <div class="carousel-cell">
+            <img src="./assets/images/reviews/carousel/2.jpg">
+          </div>
+          <div class="carousel-cell">
+            <img src="./assets/images/reviews/carousel/3.jpg">
+          </div>
+          <div class="carousel-cell">
+            <img src="./assets/images/reviews/carousel/unnamed.jpg">
+          </div>
+        </carousel>
+      </div>
+    </div>
+  </div>
+
+  <div class="reviews__third-div background-white">
+    <div class="third__top-flex">
+      <p class="p__second-big-letter">НАВЧАЙСЯ В ПРОФІ</p>
+      <p class="p__big-letter">НАШІ МЕНТОРИ</p>
+    </div>
+    <div class="fourth__bottom-flex">
+      <div class="fourth__container">
+        <p class="fourth__p-bold">Madison Ivi</p>
+        <p class="fourth__p-normal">Experience 7 years</p>
+        <img src="./assets/images/reviews/carousel/unnamed.jpg">
+        <p class="fourth__p-description">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          A aspernatur explicabo incidunt ipsam, nisi quod.
+          Fuga impedit pariatur placeat ratione?
+          Accusantium at in laborum magnam quidem sapiente sint velit voluptatem!
+        </p>
+      </div>
+
+      <div class="fourth__container">
+        <p class="fourth__p-bold">Madison Ivi</p>
+        <p class="fourth__p-normal">Experience 7 years</p>
+        <img src="./assets/images/reviews/carousel/unnamed.jpg">
+        <p class="fourth__p-description">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          A aspernatur explicabo incidunt ipsam, nisi quod.
+          Fuga impedit pariatur placeat ratione?
+          Accusantium at in laborum magnam quidem sapiente sint velit voluptatem!
+        </p>
+      </div>
+
+      <div class="fourth__container">
+        <p class="fourth__p-bold">Madison Ivi</p>
+        <p class="fourth__p-normal">Experience 7 years</p>
+        <img src="./assets/images/reviews/carousel/unnamed.jpg">
+        <p class="fourth__p-description">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          A aspernatur explicabo incidunt ipsam, nisi quod.
+          Fuga impedit pariatur placeat ratione?
+          Accusantium at in laborum magnam quidem sapiente sint velit voluptatem!
+        </p>
+      </div>
+
+      <div class="fourth__container">
+        <p class="fourth__p-bold">Madison Ivi</p>
+        <p class="fourth__p-normal">Experience 7 years</p>
+        <img src="./assets/images/reviews/carousel/unnamed.jpg">
+        <p class="fourth__p-description">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          A aspernatur explicabo incidunt ipsam, nisi quod.
+          Fuga impedit pariatur placeat ratione?
+          Accusantium at in laborum magnam quidem sapiente sint velit voluptatem!
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="reviews__fifth-div">
+    <p class="p__big-letter black">Speak in years</p>
+    <div class="fifth__inside-div">
+      <div class="fifth__flex">
+        <div class="fifth__round">52</div>
+        <div class="fifth__p-style">Lorem ipsum dolor.</div>
+      </div>
+      <div class="fifth__flex">
+        <div class="fifth__round">200</div>
+        <div class="fifth__p-style">Lorem ipsum dolor.</div>
+      </div>
+      <div class="fifth__flex">
+        <div class="fifth__round">300</div>
+        <div class="fifth__p-style">Lorem ipsum dolor.</div>
+      </div>
+      <div class="fifth__flex">
+        <div class="fifth__round">15</div>
+        <div class="fifth__p-style">Lorem ipsum dolor.</div>
+      </div>
+      <div class="fifth__flex">
+        <div class="fifth__round">21</div>
+        <div class="fifth__p-style">Lorem ipsum dolor.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="reviews__sixth-div">
+    <img src="./assets/images/reviews/carousel/unnamed.jpg">
+    <img src="./assets/images/reviews/carousel/2.jpg">
+    <img src="./assets/images/reviews/carousel/3.jpg">
+    <img src="./assets/images/reviews/carousel/gl9459.jpg">
+    <img src="./assets/images/reviews/carousel/unnamed.jpg">
+  </div>
+
+  <div class="reviews__seventh-div">
+    <div class="seventh__main-div">
+      <p class="p__second-big-letter">Lorem ipsum dolor sit amet.</p>
+      <p class="p__big-letter">Lorem ipsum dolor sit amet.</p>
+      <div class="seventh__wrapper">
+        <div class="seventh__container">
+          <div class="seventh__container-inside">Lorem ipsum</div>
+          <a href="#">Details</a>
+        </div>
+        <div class="seventh__container">
+          <div class="seventh__container-inside">Lorem ipsum</div>
+          <a href="#">Details</a>
+        </div>
+        <div class="seventh__container">
+          <div class="seventh__container-inside">Lorem ipsum</div>
+          <a href="#">Details</a>
+        </div>
+        <div class="seventh__container">
+          <div class="seventh__container-inside">Lorem ipsum</div>
+          <a href="#">Details</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
