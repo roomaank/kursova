@@ -5,7 +5,7 @@
 }
 
 form.submitted {
-  .modal__control.ng-invalid {
+  .control.ng-invalid {
     border: 1px solid #cc2936;
   }
 }
@@ -54,22 +54,6 @@ form.submitted {
       display: grid;
       grid-gap: 1.875rem;
       grid-template-columns: 1fr 1fr;
-    }
-  }
-
-  &__control {
-    width: 100%;
-    margin: 10px 0;
-    outline: none;
-    border: 1px solid #cccfd3;
-    border-radius: 4px;
-    padding: 10px;
-    padding-right: 36px;
-    line-height: 1.5rem;
-    font-size: 1rem;
-
-    &.ng-invalid.ng-touched {
-      border: 1px solid #cc2936;
     }
   }
 }

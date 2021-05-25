@@ -1,0 +1,325 @@
+.contact-wrapper {
+  display: flex;
+  justify-content: center;
+  max-width: 1150px;
+  width: 100%;
+  margin: 20px auto;
+  height: 80%;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 6px 6px rgb(10 16 20 / 15%), 0 0 52px rgb(10 16 20 / 12%);
+}
+
+.flex {
+  &__left {
+    height: 80%;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  &__right {
+    height: 100%;
+    width: 30%;
+    background-color: #ab8e69;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__right .img {
+    height: 0px;
+    width: 0px;
+  }
+
+  &__right-wrapper {
+    height: 80%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0 auto;
+  }
+
+  &__inside {
+    height: 30%;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+
+  }
+
+  &__inside p {
+    font-style: italic;
+    font-size: 24px;
+  }
+
+  &__inside .p {
+    font-style: italic;
+    font-size: 24px;
+  }
+
+  &__inside img {
+    height: 30px;
+    width: 30px;
+  }
+
+  &__form {
+    display: flex;
+    height: 30%;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    height: 10%;
+    width: 80%;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  &__bottom img {
+    height: 30px;
+    width: 30px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50%;
+  }
+
+  &__input {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 10px;
+  }
+
+  &__input-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__checkbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 20px;
+  }
+
+  &__checkbox-none {
+    display: none;
+  }
+
+  &__checkbox span {
+    display: block;
+  }
+
+  &__flex-row {
+    display: flex;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 50%;
+  }
+
+  &__column-inside {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__column-inside img {
+    height: 35px;
+    width: 35px;
+  }
+
+  &__column-inside span {
+    font-style: italic;
+    color: #cccfd3;
+    padding-left: 10px;
+  }
+}
+
+.line {
+  width: 85%;
+  height: 0;
+  border: 1px solid #C4C4C4;
+  margin: 3px;
+  display: inline-block;
+}
+
+//FORM CHANGES
+.form1-none {
+  display: none
+}
+
+.form1 {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+
+.form2-none {
+  display: none;
+}
+
+
+//FORM CHANGES
+.form {
+  &__div-radio {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+  }
+
+  &__span-style {
+    font-style: italic;
+    color: maroon;
+  }
+
+  &__wrapper {
+    height: 100%;
+  }
+}
+
+.div-input {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+.div-input input {
+  height: 100%;
+  margin-top: 10px;
+}
+
+.textarea textarea {
+  margin: 10px 0 0 40px;
+  resize: none;
+  border: 1px solid #cccfd3;
+  border-radius: 4px;
+}
+
+.textarea {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.textarea textarea {
+  display: block;
+}
+
+/*CUSTOM_CHECKBOX*/
+.custom-checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+/* для элемента label, связанного с .custom-checkbox */
+.custom-checkbox + label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+
+/* создание в label псевдоэлемента before со следующими стилями */
+.custom-checkbox + label::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 2px solid #ab8e69;
+  border-radius: 2px;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+/* стили для активного чекбокса (при нажатии на него) */
+.custom-checkbox:not(:disabled):active + label::before {
+  background-color: #ab8e69;
+  border-color: #ab8e69;
+}
+
+
+/* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+.custom-checkbox:focus:not(:checked) + label::before {
+  border-color: #ab8e69;
+}
+
+/* стили для чекбокса, находящегося в состоянии checked */
+.custom-checkbox:checked + label::before {
+  border-color: #ab8e69;
+  background-color: #ab8e69;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
+/*CUSTOM_CHECKBOX*/
+
+
+/*CUSTOM RADIOBUTTOM*/
+.custom-radio {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+/* для элемента label связанного с .custom-radio */
+.custom-radio + label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+
+/* создание в label псевдоэлемента  before со следующими стилями */
+.custom-radio + label::before {
+  content: '';
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 2px solid #ab8e69;
+  border-radius: 50%;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+/* стили для активной радиокнопки (при нажатии на неё) */
+.custom-radio:not(:disabled):active + label::before {
+  background-color: #ab8e69;
+  border-color: #ab8e69;
+}
+
+/* стили для радиокнопки, находящейся в состоянии checked */
+.custom-radio:checked + label::before {
+  border-color: #ab8e69;
+  background-color: #ab8e69;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+}
+
+/*CUSTOM RADIOBUTTOM*/
