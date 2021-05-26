@@ -12,16 +12,6 @@
     flex-direction: row;
     align-items: center;
   }
-
-  &__second-div {
-    width: 100%;
-    height: 50vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 50px;
-  }
-
   &__third-div {
     width: 100%;
     height: 90vh;
@@ -31,36 +21,12 @@
     margin-top: 50px;
     background-color: #282828;
   }
-
   &__fifth-div {
     height: 50vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  &__sixth-div{
-    height: 20vh;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    background-color: #cccfd3;
-    margin-bottom: 50px;
-    align-items: center;
-  }
-  &__sixth-div img{
-    display: block;
-    height: 80%;
-    width: 13%;
-    border-radius: 20px;
-  }
-  &__seventh-div{
-    height: 50vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
   }
 }
 
@@ -262,39 +228,6 @@
   color: #0a0a0a;
 }
 
-.second {
-  &__top-flex {
-    width: 40%;
-    height: 30%;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  &__bottom-flex {
-    width: 80%;
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 20px auto;
-  }
-
-  &__inside {
-    height: 100%;
-    width: 95%;
-    display: flex;
-    justify-content: space-around;
-  }
-
-  &__inside img {
-    height: 100px;
-    width: 250px;
-    display: block;
-  }
-}
-
 .third {
   &__top-flex {
     height: 20%;
@@ -358,144 +291,17 @@ carousel {
     justify-content: space-around;
     margin-bottom: 50px;
     align-items: center;
-  }
-
-  &__container {
-    display: flex;
-    flex-direction: column;
-    height: 80%;
-    width: 20%;
-    background-color: #ab8e69;
-    box-sizing: border-box;
-    border-radius: 20px;
-  }
-
-  &__container img {
-    height: 50%;
-    width: 70%;
-    margin: 0 auto;
-    border-radius: 20px;
-  }
-
-  &__container p {
-    padding: 0 20px;
-  }
-
-  &__p-bold {
-    font-weight: bold;
-    font-size: 16px;
-  }
-
-  &__p-normal {
-    font-weight: normal;
-    font-size: 14px;
-    margin-bottom: 15px;
-  }
-
-  &__p-description {
-    font-weight: 500;
-    font-size: 14px;
-    margin-top: 25px;
-    line-height: 20px;
-    text-align: justify;
+    max-width: 1150px;
   }
 }
 
 .fifth {
   &__inside-div {
-    height: 70%;
+    height: 100%;
     width: 90%;
     display: flex;
     justify-content: space-around;
     align-items: center;
   }
-
-  &__flex {
-    height: 70%;
-    width: 10%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  &__round {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    border: 15px solid #EDF4FB;
-    margin-bottom: 19px;
-    font-weight: 800;
-    font-size: 48px;
-    line-height: 21px;
-    background-color: #ab8e69;
-  }
-
-  &__p-style {
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 26px;
-    color: #000000;
-    text-align: center;
-  }
 }
 
-.seventh{
-  &__main-div{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  &__wrapper{
-    height: 70%;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  &__container{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    height: 90%;
-    width: 20%;
-    box-sizing: border-box;
-    margin: 0;
-    flex-shrink: 0;
-    border: 1px solid #ab8e69;
-    border-radius: 20px;
-    padding-top: 53px;
-    transition: .3s;
-  }
-  &__container-inside{
-    font-weight: 900;
-    font-size: 30px;
-    line-height: 37px;
-    text-align: center;
-    text-transform: uppercase;
-    color: #ab8e69;
-    margin-bottom: 100px;
-  }
-  &__container a{
-    display: block;
-    position: relative;
-    outline: none;
-    background-color: #cccfd3;
-    font-weight: bold;
-    color: #000000;
-    border-radius: 0 0 20px 20px;
-    padding: 20px 0;
-    text-align: center;
-    cursor: pointer;
-    transition: .3s;
-    text-decoration: none;
-  }
-  &__container a:hover{
-    background-color: #ab8e69;
-  }
-
-}
