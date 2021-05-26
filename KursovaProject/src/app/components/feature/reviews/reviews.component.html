@@ -40,23 +40,12 @@
 
   </div>
 
-  <div class="reviews__second-div">
-    <div class="second__top-flex">
-      <p class="p__second-big-letter">МИ СПІВПРАЦЮЄМО</p>
-      <p class="p__big-letter">З ЛІДЕРАМИ ІТ-РИНКУ</p>
-    </div>
-    <div class="second__bottom-flex">
-      <div class="second__inside">
-        <img src="assets/images/reviews/company/binariks.png">
-        <img src="assets/images/reviews/company/elex.png">
-        <img src="assets/images/reviews/company/globallogi.png">
-        <img src="assets/images/reviews/company/Incora.jpg">
-      </div>
-      <div class="second__inside">
-        <img src="assets/images/reviews/company/epam.png">
-        <img src="assets/images/reviews/company/N-iX_logo.jpg">
-        <img src="assets/images/reviews/company/rolique.png">
-        <img src="assets/images/reviews/company/SoftServe.png">
+  <div class="reviews__fifth-div">
+    <p class="p__big-letter black">Speak in years</p>
+    <div class="fifth__inside-div">
+      <div class="fifth__flex" *ngFor="let el of circle" [id]="el.id">
+        <div class="fifth__round">{{el.number}}</div>
+        <div class="fifth__p-style">{{el.description}}</div>
       </div>
     </div>
   </div>
@@ -94,16 +83,16 @@
                   [dots]="true"
                   [loop]="true">
           <div class="carousel-cell">
-            <img src="./assets/images/reviews/carousel/gl9459.jpg">
+            <img src="./assets/images/reviews/carousel/cukerberg.jpg">
           </div>
           <div class="carousel-cell">
-            <img src="./assets/images/reviews/carousel/2.jpg">
+            <img src="./assets/images/reviews/carousel/elon.jpg">
           </div>
           <div class="carousel-cell">
-            <img src="./assets/images/reviews/carousel/3.jpg">
+            <img src="./assets/images/reviews/carousel/stiv.jpg">
           </div>
           <div class="carousel-cell">
-            <img src="./assets/images/reviews/carousel/unnamed.jpg">
+            <img src="./assets/images/reviews/carousel/elon.jpg">
           </div>
         </carousel>
       </div>
@@ -116,114 +105,13 @@
       <p class="p__big-letter">НАШІ МЕНТОРИ</p>
     </div>
     <div class="fourth__bottom-flex">
-      <div class="fourth__container">
-        <p class="fourth__p-bold">Madison Ivi</p>
-        <p class="fourth__p-normal">Experience 7 years</p>
-        <img src="./assets/images/reviews/carousel/unnamed.jpg">
-        <p class="fourth__p-description">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          A aspernatur explicabo incidunt ipsam, nisi quod.
-          Fuga impedit pariatur placeat ratione?
-          Accusantium at in laborum magnam quidem sapiente sint velit voluptatem!
-        </p>
+      <div class="fourth__container" *ngFor="let el of card" [id]="el.id">
+        <p class="fourth__p-bold">{{el.fullName}}</p>
+        <p class="fourth__p-normal">{{el.experience}}</p>
+        <img [src]="el.img">
+        <p class="fourth__p-description">{{el.description}}</p>
       </div>
 
-      <div class="fourth__container">
-        <p class="fourth__p-bold">Madison Ivi</p>
-        <p class="fourth__p-normal">Experience 7 years</p>
-        <img src="./assets/images/reviews/carousel/unnamed.jpg">
-        <p class="fourth__p-description">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          A aspernatur explicabo incidunt ipsam, nisi quod.
-          Fuga impedit pariatur placeat ratione?
-          Accusantium at in laborum magnam quidem sapiente sint velit voluptatem!
-        </p>
-      </div>
-
-      <div class="fourth__container">
-        <p class="fourth__p-bold">Madison Ivi</p>
-        <p class="fourth__p-normal">Experience 7 years</p>
-        <img src="./assets/images/reviews/carousel/unnamed.jpg">
-        <p class="fourth__p-description">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          A aspernatur explicabo incidunt ipsam, nisi quod.
-          Fuga impedit pariatur placeat ratione?
-          Accusantium at in laborum magnam quidem sapiente sint velit voluptatem!
-        </p>
-      </div>
-
-      <div class="fourth__container">
-        <p class="fourth__p-bold">Madison Ivi</p>
-        <p class="fourth__p-normal">Experience 7 years</p>
-        <img src="./assets/images/reviews/carousel/unnamed.jpg">
-        <p class="fourth__p-description">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          A aspernatur explicabo incidunt ipsam, nisi quod.
-          Fuga impedit pariatur placeat ratione?
-          Accusantium at in laborum magnam quidem sapiente sint velit voluptatem!
-        </p>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="reviews__fifth-div">
-    <p class="p__big-letter black">Speak in years</p>
-    <div class="fifth__inside-div">
-      <div class="fifth__flex">
-        <div class="fifth__round">52</div>
-        <div class="fifth__p-style">Lorem ipsum dolor.</div>
-      </div>
-      <div class="fifth__flex">
-        <div class="fifth__round">200</div>
-        <div class="fifth__p-style">Lorem ipsum dolor.</div>
-      </div>
-      <div class="fifth__flex">
-        <div class="fifth__round">300</div>
-        <div class="fifth__p-style">Lorem ipsum dolor.</div>
-      </div>
-      <div class="fifth__flex">
-        <div class="fifth__round">15</div>
-        <div class="fifth__p-style">Lorem ipsum dolor.</div>
-      </div>
-      <div class="fifth__flex">
-        <div class="fifth__round">21</div>
-        <div class="fifth__p-style">Lorem ipsum dolor.</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="reviews__sixth-div">
-    <img src="./assets/images/reviews/carousel/unnamed.jpg">
-    <img src="./assets/images/reviews/carousel/2.jpg">
-    <img src="./assets/images/reviews/carousel/3.jpg">
-    <img src="./assets/images/reviews/carousel/gl9459.jpg">
-    <img src="./assets/images/reviews/carousel/unnamed.jpg">
-  </div>
-
-  <div class="reviews__seventh-div">
-    <div class="seventh__main-div">
-      <p class="p__second-big-letter">Lorem ipsum dolor sit amet.</p>
-      <p class="p__big-letter">Lorem ipsum dolor sit amet.</p>
-      <div class="seventh__wrapper">
-        <div class="seventh__container">
-          <div class="seventh__container-inside">Lorem ipsum</div>
-          <a href="#">Details</a>
-        </div>
-        <div class="seventh__container">
-          <div class="seventh__container-inside">Lorem ipsum</div>
-          <a href="#">Details</a>
-        </div>
-        <div class="seventh__container">
-          <div class="seventh__container-inside">Lorem ipsum</div>
-          <a href="#">Details</a>
-        </div>
-        <div class="seventh__container">
-          <div class="seventh__container-inside">Lorem ipsum</div>
-          <a href="#">Details</a>
-        </div>
-
-      </div>
     </div>
   </div>
 

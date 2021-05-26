@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Circle } from '../../../constants/circle';
+import { MentorCard } from '../../../constants/mentorCard';
+
 
 
 @Component({
@@ -10,6 +13,8 @@ export class ReviewsComponent implements OnInit {
 
   close = false;
   onPlay = false;
+  circle = Circle;
+  card = MentorCard;
 
   constructor() {}
 
