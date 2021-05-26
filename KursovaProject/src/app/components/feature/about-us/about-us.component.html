@@ -1,6 +1,17 @@
 <div class="wrapper">
-  <div class="photo__wrapper">
-    <img *ngFor="let photo of photos" [src]="photo.path" />
+  <div class="photo__wrapper" >
+<!--    <img *ngFor="let photo of photos" [src]="photo.path" />-->
+    <carousel [width]="1000"
+              [height]="450"
+              [cellWidth]="'100%'"
+              [arrows]="false"
+              [autoplay]="true"
+              [dots]="true"
+              [loop]="true">
+      <div class="carousel-cell" *ngFor="let photo of photos">
+        <img  [src]="photo.path">
+      </div>
+    </carousel>
   </div>
   <div class="content__inner">
     <div class="content__divider">Our Rooms</div>

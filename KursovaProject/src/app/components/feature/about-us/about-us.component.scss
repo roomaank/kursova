@@ -7,11 +7,16 @@ $main-font: "Girassol", cursive;
 .photo {
   &__wrapper {
     display: flex;
-
-    img {
-      width: 50%;
-    }
+    height: 50vh;
+    width: 100%;
+    align-items: center;
   }
+}
+
+carousel {
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .content {
