@@ -2,26 +2,26 @@ export const Circle = [
   {
     id: '1',
     number: '5',
-    description: 'Років на ринку'
+    description: 'Years on the market'
   },
   {
     id: '2',
     number: '800',
-    description: 'Задоволених студентів'
+    description: 'Satisfied students'
   },
   {
     id: '3',
     number: '300',
-    description: 'Відгуків'
+    description: 'Reviews'
   },
   {
     id: '4',
     number: '15',
-    description: 'Професійних викладачів'
+    description: 'Professional teachers'
   },
   {
     id: '5',
     number: '21',
-    description: 'Офіційний партнер'
+    description: 'Official partner'
   },
 ];

@@ -1,23 +1,23 @@
 export const MentorCard = [
   {
     id: '1',
-    fullName: 'Марк Цукерберг',
-    experience: 'Досвід: 10 років',
-    img:'./assets/images/reviews/carousel/cukerberg.jpg',
-    description: 'Senior Developer. React розробник в компанії Rolique. Сертифікований AWS спеціаліст.'
+    fullName: 'Mark Zuckerberg',
+    experience: 'Experience: 10 years',
+    img:'./assets/images/reviews/carousel/mark.jpg',
+    description: 'Senior Developer. React developer at Rolique. AWS certified specialist.'
   },
   {
     id: '2',
-    fullName: 'Ілон Маск',
-    experience: 'Досвід: 10 років',
+    fullName: 'Elon Musk',
+    experience: 'Experience: 10 years',
     img:'./assets/images/reviews/carousel/elon.jpg',
-    description: 'Засновник BigBird, OktenWeb Digital Studio та власник мережі шкіл прорамування Okten. Сертифікований Java розробник.'
+    description: 'Founder of BigBird, OktenWeb Digital Studio and owner of the Okten promotion network. Certified Java developer.'
   },
   {
     id: '3',
-    fullName: 'Стів Джобс',
-    experience: 'Досвід: 10 років',
+    fullName: 'Steve Jobs',
+    experience: 'Experience: 10 years',
     img:'./assets/images/reviews/carousel/stiv.jpg',
-    description: 'Senior Developer. React розробник в компанії Rolique. Сертифікований AWS спеціаліст.'
+    description: 'Senior Developer. React developer at Rolique. AWS certified specialist.'
   },
 ];
