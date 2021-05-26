@@ -43,10 +43,7 @@
   <div class="reviews__fifth-div">
     <p class="p__big-letter black">Speak in years</p>
     <div class="fifth__inside-div">
-      <div class="fifth__flex" *ngFor="let el of circle" [id]="el.id">
-        <div class="fifth__round">{{el.number}}</div>
-        <div class="fifth__p-style">{{el.description}}</div>
-      </div>
+      <app-circle></app-circle>
     </div>
   </div>
 
@@ -105,13 +102,7 @@
       <p class="p__big-letter">НАШІ МЕНТОРИ</p>
     </div>
     <div class="fourth__bottom-flex">
-      <div class="fourth__container" *ngFor="let el of card" [id]="el.id">
-        <p class="fourth__p-bold">{{el.fullName}}</p>
-        <p class="fourth__p-normal">{{el.experience}}</p>
-        <img [src]="el.img">
-        <p class="fourth__p-description">{{el.description}}</p>
-      </div>
-
+      <app-mentors></app-mentors>
     </div>
   </div>
 
