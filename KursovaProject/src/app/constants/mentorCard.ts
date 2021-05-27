@@ -1,23 +1,20 @@
 export const MentorCard = [
   {
     id: '1',
-    fullName: 'Mark Zuckerberg',
+    fullName: 'Dax Ecel',
     experience: 'Experience: 10 years',
-    img:'./assets/images/reviews/carousel/mark.jpg',
-    description: 'Senior Developer. React developer at Rolique. AWS certified specialist.'
+    img:'./assets/images/reviews/teacher1.jpg'
   },
   {
     id: '2',
-    fullName: 'Elon Musk',
-    experience: 'Experience: 10 years',
-    img:'./assets/images/reviews/carousel/elon.jpg',
-    description: 'Founder of BigBird, OktenWeb Digital Studio and owner of the Okten promotion network. Certified Java developer.'
+    fullName: 'Rosita Calderon',
+    experience: 'Experience: 8 years',
+    img:'./assets/images/reviews/teacher2.jpg'
   },
   {
     id: '3',
-    fullName: 'Steve Jobs',
-    experience: 'Experience: 10 years',
-    img:'./assets/images/reviews/carousel/stiv.jpg',
-    description: 'Senior Developer. React developer at Rolique. AWS certified specialist.'
+    fullName: 'Courtney Tylor',
+    experience: 'Experience: 4 years',
+    img:'./assets/images/reviews/teacher3.jpg'
   },
 ];
