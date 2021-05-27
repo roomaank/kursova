@@ -12,21 +12,17 @@
     flex-direction: row;
     align-items: center;
   }
-  &__third-div {
-    width: 100%;
-    height: 90vh;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 50px;
-    background-color: #282828;
-  }
+
   &__fifth-div {
-    height: 50vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  &__third-div {
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -216,10 +212,6 @@
   color: white;
 }
 
-.background-white {
-  background-color: #FFFFFF;
-}
-
 .gold {
   color: #ab8e69;
 }
@@ -228,68 +220,14 @@
   color: #0a0a0a;
 }
 
-.third {
-  &__top-flex {
-    height: 20%;
-    width: 50%;
-    align-items: center;
-    text-align: center;
-  }
-
-  &__bottom-flex {
-    height: 70%;
-    width: 90%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 auto;
-  }
-
-  &__inside {
-    height: 100%;
-    width: 48%;
-    align-items: center;
-    margin: 0 auto;
-    padding-top: 50px;
-  }
-
-  &__inside img {
-    height: 200px;
-    width: 400px;
-  }
-
-  &__p-small {
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 26px;
-    color: #FFFFFF;
-    text-align: justify;
-  }
-
-  &__li-text-style {
-    position: relative;
-    padding-left: 30px;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 24px;
-    color: #FFFFFF;
-  }
-}
-
-carousel {
-  align-items: center;
-  text-align: center;
-  margin-top: 50px;
-  margin-left: 150px;
-}
-
 .fourth {
   &__bottom-flex {
     height: 80%;
     width: 100%;
     display: flex;
     justify-content: space-around;
-    margin-bottom: 50px;
+    flex-wrap: wrap;
+    margin: 50px 0;
     align-items: center;
     max-width: 1150px;
   }

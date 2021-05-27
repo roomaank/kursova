@@ -22,7 +22,6 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {ControlWrapperComponent} from './components/shared/control-wrapper/control-wrapper.component';
 import {ErrorContentComponent} from './components/shared/error-content/error-content.component';
-import {DragScrollModule} from 'ngx-drag-scroll';
 import {NgxMaskModule} from 'ngx-mask';
 import {MatMenuModule} from '@angular/material/menu';
 import {LikedCoursesComponent} from './components/feature/liked-courses/liked-courses.component';
@@ -60,7 +59,6 @@ import { MentorsComponent } from './components/feature/reviews/mentors/mentors.c
     MatPaginatorModule,
     FormsModule,
     ReactiveFormsModule,
-    DragScrollModule,
     ToastrModule.forRoot({
       timeOut: 3000,
       positionClass: 'toast-top-center',

@@ -30,6 +30,31 @@ $main-font: "Girassol", cursive;
 
   &__rooms {
     overflow: hidden;
+    padding: 0 30px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-inner {
+      width: 90%;
+      height: 100%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      img {
+        width: 23%;
+        height: 80%;
+        border-radius: 5%;
+        box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
+
+        &:hover {
+          transform: rotate(7deg);
+        }
+      }
+    }
   }
 
   &__description {
@@ -74,6 +99,12 @@ $main-font: "Girassol", cursive;
       border-radius: 3px;
       outline: none;
       cursor: pointer;
+
+      &:hover {
+        background-color: #ab8e69;
+        color: white;
+        transition: .5s;
+      }
     }
   }
 }
