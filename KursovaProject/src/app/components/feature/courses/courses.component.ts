@@ -1,5 +1,4 @@
 import { MoreInfoDialogHelperService } from './../../../services/more-info-dialog-helper.service';
-import { MoreInfoDialogComponent } from './../more-info-dialog/more-info-dialog.component';
 import { LikedCoursesService } from './../../../services/liked-courses.service';
 import { signUpModalComponent } from '../../shared/sign-up-modal/sign-up-modal.component';
 import { COURSES } from './../../../constants/courses.constants';
@@ -35,11 +34,6 @@ export class CoursesComponent implements OnInit {
 
   openSignUpDialog(): void {
     this.dialog.open(signUpModalComponent);
-  }
-
-  openMoreInfoDialog(course): void {
-    this.moreInfoDialogHelper.selectedCourse$.next(course);
-    this.dialog.open(MoreInfoDialogComponent);
   }
 
   handleLikeClick(course: COURSE_ITEM): void {
@@ -85,6 +79,7 @@ export class CoursesComponent implements OnInit {
       this.likedCoursesService.likedCoursesLength$.next(
         this.likedCoursesArray.length
       );
+      this.likedCoursesService.likedCoursesArray$.next(this.likedCoursesArray)
     }
   }
 

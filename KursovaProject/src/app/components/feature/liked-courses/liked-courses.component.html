@@ -1,8 +1,17 @@
-<div class="wrappper">
+<div class="wrapper">
   <div class="container__inner" *ngFor="let course of likedCourses">
-    <div class="course-type"></div>
-    <div class="course-subType"></div>
-    <div class="course-days"></div>
-    <div class="course-price"></div>
+    <div class="course-type">{{ course.type }}</div>
+    <div class="course-subType">
+      <div class="course-subType__left">Type:</div>
+      <div class="course-subType__right">{{ course.subType }}</div>
+    </div>
+    <div class="course-days">
+      <div class="course-days__left">Days Count</div>
+      <div class="course-days__right">{{ course.days }}</div>
+    </div>
+    <div class="course-price add">
+      <div class="course-price__left">Price</div>
+      <div class="course-price__right">{{ course.price }}</div>
+    </div>
   </div>
 </div>

@@ -1,3 +1,12 @@
+::ng-deep .mat-menu {
+  width: 200px;
+  max-width: 200px;
+  margin: 0;
+  padding: 0;
+  border: 5px solid #ab8e69;
+  box-sizing: border-box;
+}
+
 .header {
   &__wrapper {
     padding: 0 30px;

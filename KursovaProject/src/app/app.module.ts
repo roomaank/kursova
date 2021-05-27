@@ -25,7 +25,6 @@ import {ErrorContentComponent} from './components/shared/error-content/error-con
 import {NgxMaskModule} from 'ngx-mask';
 import {MatMenuModule} from '@angular/material/menu';
 import {LikedCoursesComponent} from './components/feature/liked-courses/liked-courses.component';
-import {MoreInfoDialogComponent} from './components/feature/more-info-dialog/more-info-dialog.component';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { CircleComponent } from './components/feature/reviews/circle/circle.component';
 import { MentorsComponent } from './components/feature/reviews/mentors/mentors.component';
@@ -44,7 +43,6 @@ import { MentorsComponent } from './components/feature/reviews/mentors/mentors.c
     ControlWrapperComponent,
     ErrorContentComponent,
     LikedCoursesComponent,
-    MoreInfoDialogComponent,
     CircleComponent,
     MentorsComponent,
   ],

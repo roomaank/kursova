@@ -19,7 +19,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.getLikedCoursesLength();
-    this.getStorageLikedCoursesLength();
+    // this.getStorageLikedCoursesLength();
   }
 
   private getLikedCoursesLength(): void {

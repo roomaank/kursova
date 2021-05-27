@@ -1,0 +1,29 @@
+.wrapper {
+  height: 300px;
+  width: 100%;
+}
+
+.container__inner {
+  margin: 15px;
+  width: 90%;
+  border-bottom: 1px solid #ab8e69;
+}
+
+.course {
+  &-type {
+    display: flex;
+    justify-content: center;
+    font-family: "Girassol", cursive;
+    color: maroon;
+    margin-bottom: 10px;
+  }
+  &-subType, &-days, &-price {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+  }
+}
+
+.add {
+    margin-bottom: 10px;
+}
