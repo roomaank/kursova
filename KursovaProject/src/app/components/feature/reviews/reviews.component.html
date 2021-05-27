@@ -7,37 +7,52 @@
           <p class="p__big-letter">Lorem ipsum dolor sit amet.</p>
         </div>
         <div>
-          <p class="p__small-letter"><b>Lorem ipsum</b> dolor sit amet, consectetur adipisicing elit. Assumenda commodi
-            consectetur, deserunt dolor doloribus dolorum, eius et expedita illum ipsam labore laborum necessitatibus,
-            non rerum saepe sed similique sit soluta!</p>
-          <p class="p__small-letter"><b>Lorem ipsum</b> sit amet, consectetur adipisicing elit. Assumenda commodi
-            consectetur, deserunt dolor doloribus dolorum, eius et expedita illum ipsam labore laborum necessitatibus,
-            non rerum saepe sed similique sit soluta!</p>
+          <p class="p__small-letter">
+            <b>Lorem ipsum</b> dolor sit amet, consectetur adipisicing elit.
+            Assumenda commodi consectetur, deserunt dolor doloribus dolorum,
+            eius et expedita illum ipsam labore laborum necessitatibus, non
+            rerum saepe sed similique sit soluta!
+          </p>
+          <p class="p__small-letter">
+            <b>Lorem ipsum</b> sit amet, consectetur adipisicing elit. Assumenda
+            commodi consectetur, deserunt dolor doloribus dolorum, eius et
+            expedita illum ipsam labore laborum necessitatibus, non rerum saepe
+            sed similique sit soluta!
+          </p>
         </div>
       </div>
     </div>
 
-    <div [ngClass]="onPlay?'display-none':'video-box'">
-      <div [ngClass]="onPlay?'display-none':'play-btn'" (click)="play($event)">
-        <img src="./assets/images/reviews/play-button.svg">
+    <div [ngClass]="onPlay ? 'display-none' : 'video-box'">
+      <div
+        [ngClass]="onPlay ? 'display-none' : 'play-btn'"
+        (click)="play($event)"
+      >
+        <img src="./assets/images/reviews/play-button.svg" />
       </div>
     </div>
 
-    <div [ngClass]="close?'close-img':'display-none'">
-      <div [ngClass]="onPlay?'video is-active':'display-none'">
-        <iframe width="800" height="515" src="https://www.youtube.com/embed/lhFU5H5KPFE" title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
-        <div [ngClass]="close?'close-img':'display-none'" (click)="isClosed($event)">
-          <img src="./assets/images/reviews/close.svg">
+    <div [ngClass]="close ? 'close-img' : 'display-none'">
+      <div [ngClass]="onPlay ? 'video is-active' : 'display-none'">
+        <iframe
+          width="800"
+          height="515"
+          src="https://www.youtube.com/embed/lhFU5H5KPFE"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+        <div
+          [ngClass]="close ? 'close-img' : 'display-none'"
+          (click)="isClosed($event)"
+        >
+          <img src="./assets/images/reviews/close.svg" />
         </div>
       </div>
     </div>
 
-    <div class="first-div__right">
-    </div>
-
+    <div class="first-div__right"></div>
   </div>
 
   <div class="reviews__fifth-div">
@@ -48,62 +63,8 @@
   </div>
 
   <div class="reviews__third-div">
-    <div class="third__top-flex">
-      <p class="p__second-big-letter gold">WE COOPERATE</p>
-      <p class="p__big-letter white">WITH IT MARKET LEADERS</p>
-    </div>
-    <div class="third__bottom-flex">
-      <div class="third__inside">
-        <p class="third__p-small">Since 2016, we have honed our teaching methods and found the most effective
-          a way that allows students to master the program better and to a greater extent.</p>
-        <ul>
-          <li class="third__li-text-style">Lecture material is presented separately. This allows you to focus on
-            acquaintance with it without being distracted by performance of any actions.
-          </li>
-          <li class="third__li-text-style">Practical classes are held on separate days and include previous tasks
-            lectures. In this case, some tasks do not contain abstract conditions. This allows you to clearly consolidate the passed
-            material. But there are tasks that will make you develop, because they will be more abstract, and them
-            performance will depend on your imagination.
-          </li>
-          <li class="third__li-text-style">As a result of a combination of previous factors, you will master the theoretical part,
-            consolidate it in practice in two types of tasks.
-          </li>
-        </ul>
-        <p class="third__p-small">When creating the training program, we relied on the latest technologies and recommendations
-          our partners, so that after graduation you can get a job faster.</p>
-      </div>
-      <div class="third__inside">
-        <carousel [width]="600"
-                  [cellWidth]="'100%'"
-                  [arrowsOutside]="true"
-                  [autoplay]="true"
-                  [dots]="true"
-                  [loop]="true">
-          <div class="carousel-cell">
-            <img src="./assets/images/reviews/carousel/mark.jpg">
-          </div>
-          <div class="carousel-cell">
-            <img src="./assets/images/reviews/carousel/elon.jpg">
-          </div>
-          <div class="carousel-cell">
-            <img src="./assets/images/reviews/carousel/stiv.jpg">
-          </div>
-          <div class="carousel-cell">
-            <img src="./assets/images/reviews/carousel/elon.jpg">
-          </div>
-        </carousel>
-      </div>
-    </div>
-  </div>
-
-  <div class="reviews__third-div background-white">
-    <div class="third__top-flex">
-      <p class="p__second-big-letter">STUDY WITH PROFESSIONALS</p>
-      <p class="p__big-letter">OUR MENTORS</p>
-    </div>
     <div class="fourth__bottom-flex">
       <app-mentors></app-mentors>
     </div>
   </div>
-
 </div>
