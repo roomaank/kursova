@@ -60,6 +60,7 @@ export class CoursesComponent implements OnInit {
       this.likedCoursesService.likedCoursesLength$.next(
         this.likedCoursesArray.length
       );
+      this.likedCoursesService.likedCoursesArray$.next(this.likedCoursesArray)
     } else {
       this.likedCourses[course.id] = true;
 
